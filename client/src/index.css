@@ -1,5 +1,59 @@
-html, * {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+main {
+  min-height: 90vh;
+}
+
+header {
+  background-color: #F4F1DE;
+  color: #3D405B;
+}
+
+header>div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.headerImg {
+  margin-left: 30px;
+  max-height: 50px;
+}
+
+.nav-links {
+  justify-content: center;
+  align-self: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+}
+
+.nav-spacer {
+  margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
 }
