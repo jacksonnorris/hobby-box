@@ -24,6 +24,11 @@ export const ADD_USER = gql`
   }
 `;
 
+// UpdateUser
+
+// removeUser
+
+// addOrder
 export const ADD_THOUGHT = gql`
   mutation addThought($thoughtText: String!) {
     addThought(thoughtText: $thoughtText) {
@@ -39,6 +44,9 @@ export const ADD_THOUGHT = gql`
   }
 `;
 
+// cancelOrder
+
+// addReview (if there is time/future development??)
 export const ADD_COMMENT = gql`
   mutation addComment($thoughtId: ID!, $commentText: String!) {
     addComment(thoughtId: $thoughtId, commentText: $commentText) {
