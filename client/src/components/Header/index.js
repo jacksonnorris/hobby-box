@@ -7,12 +7,12 @@ const Header = () => {
     <header>
       <div>
         <Link to="/">
-          <h1>User List</h1>
+          <img className='headerImg' src='assets/hobbyBoxLogo.png' alt='Logo' />
         </Link>
-      </div>
-      <div>
-        <p>Simple App to View Users.</p>
-        <Navbar />
+        <span className='nav nav-spacer'></span>
+        <span className='nav nav-links'>
+          <Navbar />
+        </span>
       </div>
     </header>
   );
