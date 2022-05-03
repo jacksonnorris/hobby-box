@@ -18,7 +18,8 @@ const orderSchema = new Schema(
     },
     box: {
       type: Schema.Types.ObjectId,
-      ref: 'Box'
+      ref: 'Box',
+      required: true,
     }
   }
 );

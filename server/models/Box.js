@@ -11,15 +11,17 @@ const pastBoxSchema = new Schema(
       type: String,
       required: true,
     },
-    value: [String],
-    frequency : [Number],
   }
 );
 
 const boxSchema = new Schema(
   {
+    name: {
+      type: String,
+      required: true,
+    },
     price: {
-      type: Number,
+      type: [Number],
       required: true
     },
     description: {
@@ -30,9 +32,8 @@ const boxSchema = new Schema(
       type: [String],
       required: true,
     },
-    value: [String],
-    frequency : [Number],
-    pastBox : [pastBoxSchema]
+    pastBox: [pastBoxSchema],
+    frequency: [Number],
   }
 );
 
