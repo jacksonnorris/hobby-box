@@ -2,6 +2,10 @@
   {
     "username": "testuser",
     "email": "test@user.com",
-    "password": "password1234"
+    "password": "password1234",
+    "address": "1234 road st.",
+    "shipping": "4321 street rd.",
+    "orders": [],
+    "paymentInfo": []
   }
 ]

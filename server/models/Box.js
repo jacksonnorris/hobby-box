@@ -32,9 +32,7 @@ const boxSchema = new Schema(
     },
     tier: [String],
     pastBox : [pastBoxSchema],
-    frequency : {
-      
-    }
+    frequency : [Number],
   }
 );
 
