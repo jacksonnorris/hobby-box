@@ -3,7 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      {/* Footer details HERE */}
+      <div className='footerWrapper'>
+        <span>&#xa9; 2022 Hobby Box</span>
+      </div>
     </footer>
   );
 };

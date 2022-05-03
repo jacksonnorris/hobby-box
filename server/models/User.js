@@ -1,5 +1,27 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const Order = require('./Order');
+
+const paymentInfoSchema = new Schema(
+  {
+    cardNumber: {
+      type: Number,
+      required: true
+    },
+    month: {
+      type: String,
+      required: true,
+    },
+    cvv: {
+      type: Number,
+      required: true
+    },
+    zipcode: {
+      type: Number,
+      required: true
+    },
+  }
+);
 
 const userSchema = new Schema({
   username: {
@@ -18,7 +40,25 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 5,
-  }
+  },
+  address: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  shipping: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  orders: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Order'
+    }
+  ],
+  paymentInfo: [paymentInfoSchema],
+
 });
 
 userSchema.pre('save', async function (next) {
