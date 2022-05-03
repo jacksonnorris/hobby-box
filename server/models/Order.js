@@ -16,9 +16,10 @@ const orderSchema = new Schema(
       type: Number,
       required: true
     },
-    boxes: {
+    box: {
       type: Schema.Types.ObjectId,
-      ref: 'Box'
+      ref: 'Box',
+      required: true,
     }
   }
 );
