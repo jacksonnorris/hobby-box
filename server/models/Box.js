@@ -11,7 +11,7 @@ const pastBoxSchema = new Schema(
       type: String,
       required: true,
     },
-    value: [String],
+    tier: [String],
     frequency : [Number],
   }
 );
@@ -30,9 +30,11 @@ const boxSchema = new Schema(
       type: [String],
       required: true,
     },
-    value: [String],
-    frequency : [Number],
-    pastBox : [pastBoxSchema]
+    tier: [String],
+    pastBox : [pastBoxSchema],
+    frequency : {
+      
+    }
   }
 );
 

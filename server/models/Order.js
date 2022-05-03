@@ -16,7 +16,7 @@ const orderSchema = new Schema(
       type: Number,
       required: true
     },
-    box: {
+    boxes: {
       type: Schema.Types.ObjectId,
       ref: 'Box'
     }
