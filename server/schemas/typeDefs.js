@@ -31,7 +31,7 @@ const typeDefs = gql`
     description: String!
     images: [String!]
     pastBox: [PastBox]
-    frequency: [Number]
+    frequency: [Int]
   }
 
   type PastBox {
