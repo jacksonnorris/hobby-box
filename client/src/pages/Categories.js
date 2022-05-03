@@ -2,7 +2,8 @@
 import React from 'react';
 
 const Categories = () => {
-  <main>
+  return (
+    <main>
       <h4>Hobby Categories</h4>
       <hr></hr>
       <ul>
@@ -14,6 +15,7 @@ const Categories = () => {
         <li>Crafts</li>
       </ul>
     </main>
+  );
 };
 
 export default Categories;
