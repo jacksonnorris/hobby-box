@@ -13,10 +13,51 @@ const typeDefs = gql`
     user: User
   }
 
+  type Order {
+    _id: ID
+    user: User
+    name: String
+    price: Float
+    boxes: [Box]
+  }
+
+  type Interest {
+    _id: ID
+    user: User
+    name: String
+    price: Float
+    boxes: [Box]
+  }
+
+  type Box {
+    _id: ID
+    user: User
+    name: String
+    price: Float
+    description: String!
+    images: String!
+    tier: String
+    pastBox: [PastBox]
+  }
+
+  type PastBox {
+    _id: ID
+    price: Float
+    description: String
+    images: String!
+    tier: String
+  }
+
+
   type Query {
     users: [User]
     user(id: ID!): User
     me: User
+    orders: Order
+    interests: Interest
+    boxes: Box
+    interest(_id: ID!): Interest
+    box(_id: ID!): Box
   }
 
   type Mutation {
