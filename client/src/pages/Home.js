@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <main>
-      <div>
+      <div className="flex-row justify-center">
         {renderUsername()}
       </div>
       <div>

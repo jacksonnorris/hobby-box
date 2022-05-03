@@ -1,0 +1,12 @@
+[
+  {
+    "price": "24.99",
+    "description": "$25 mystery box",
+    "images": [
+      "https://via.placeholder.com/150"
+    ],
+    "value": "value",
+    "frequency": 3,
+    "pastBox": []
+  }
+]
