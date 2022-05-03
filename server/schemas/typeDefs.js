@@ -55,7 +55,7 @@ const typeDefs = gql`
     me: User
     orders: Order
     interests: Interest
-    boxes: Box
+    boxes: [Box]
     interest(_id: ID!): Interest
     box(_id: ID!): Box
   }

@@ -1,6 +1,6 @@
 const User = require('./User');
 const Box = require('./Box');
-const Interests = require('./Interests');
+const Interest = require('./Interest');
 const Order = require('./Order');
 
-module.exports = { User, Box, Interests, Order };
+module.exports = { User, Box, Interest, Order };

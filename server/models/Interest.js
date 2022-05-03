@@ -13,8 +13,8 @@ const interestSchema = new Schema(
       type: Number,
       required: true
     },
-    users: [userSchema],
-    boxes: [boxSchema]
+    // users: [userSchema],
+    // boxes: [boxSchema]
   }
 );
 
