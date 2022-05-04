@@ -1,7 +1,6 @@
 import { gql } from '@apollo/client';
 
-// addUser
-// email:String!, username:String!, password:String!): Auth
+// Add User
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
@@ -14,8 +13,7 @@ export const ADD_USER = gql`
   }
 `;
 
-// login
-// email:String!, password:String!): Auth
+// Login
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
@@ -28,29 +26,63 @@ export const LOGIN_USER = gql`
   }
 `;
 
-
-// UpdateUser
-// username: String, email: String, password: String, address: String, shipping: String, orders: [OrderInputs]): User
-
-// removeUser
-// (_id: ID!): User
-
-// addOrder
-// box: ID!): Order
-export const ADD_THOUGHT = gql`
-  mutation addThought($thoughtText: String!) {
-    addThought(thoughtText: $thoughtText) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
+// Update User
+export const UPDATE_USER = gql`
+  mutation updateUser($_id: ID!, $address: String, $shipping: String, $orders: [OrderInputs]) {
+    updateUser(_id: $id) {
+      user {
         _id
-        commentText
+        username
+        address
+        shipping
+        orders
       }
     }
   }
 `;
 
-// updateOrder
-// price: Float, box: BoxInputs, frequency: Int): Order
+// Remove User
+export const REMOVE_USER = gql`
+  mutation removeUser($_id: ID!) {
+    removeUser(_id: $id) {
+      user {
+        _id
+        username
+      }
+    }
+  }
+`;
+
+// Add Order
+export const ADD_ORDER = gql`
+  mutation addOrder($box: [ID]!) {
+    addOrder(box: $box) {
+      user
+      name
+      price
+      box
+      frequency
+      box {
+        name
+        price
+        description
+        images
+        frequency
+      }
+    }
+  }
+`;
+
+// Update Order
+export const UPDATE_ORDER = gql`
+  mutation updateOrder($price: Float, $box: BoxInputs, $frequency: Int) {
+    updateOrder(_id: $id) {
+      order {
+        _id
+        price
+        box
+        frequency
+      }
+    }
+  }
+`;
