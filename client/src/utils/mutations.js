@@ -44,7 +44,7 @@ export const UPDATE_USER = gql`
 // Remove User
 export const REMOVE_USER = gql`
   mutation removeUser($_id: ID!) {
-    addUser(_id: $id) {
+    removeUser(_id: $id) {
       user {
         _id
         username
@@ -67,7 +67,6 @@ export const ADD_ORDER = gql`
         price
         description
         images
-        pastBox
         frequency
       }
     }
