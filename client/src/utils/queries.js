@@ -6,9 +6,12 @@ import { gql } from '@apollo/client';
 export const QUERY_USERS = gql`
   query users {
     users {
-      _id
-      username
-      email
+    _id
+    username
+    email
+    password
+    address
+    shipping
     }
   }
 `;
@@ -35,52 +38,59 @@ export const QUERY_ME = gql`
 `;
 
 // // get Orders
-// export const QUERY_VALIDATE_USER = gql`
-//   query validate {
-//     validate {
-//     #need to confirm properties
-//       _id
-//       username
-//       email
-//     }
-//   }
-//   `;
-  
-// get All Boxes
-  // export const TBD = gql`
-  // query TBD {
-  //   TBD {
-  //   #properties go here:
-  //     _id
-  //     username
-  //     email
-  //   }
-  // }
-  // `;
+
+export const QUERY_ORDERS = gql`
+  query Orders {
+  orders {
+    _id
+    price
+    frequency
+    user {
+      _id
+      address
+      shipping
+    }
+  }
+}
+`;
 
 
-  // get single box by id
-  // export const TBD = gql`
-  // query TBD {
-  //   TBD {
-  //   #properties go here:
-  //     _id
-  //     username
-  //     email
-  //   }
-  // }
-  // `;
-  
 
-   // get checkout
-  // export const TBD = gql`
-  // query TBD {
-  //   TBD {
-  //   #properties go here:
-  //     _id
-  //     username
-  //     email
-  //   }
-  // }
-  // `;
+
+//get All Boxes
+export const QUERY_BOXES = gql`
+  query Boxes {
+  boxes {
+    _id
+    name
+    price
+    description
+    images
+  }
+}
+`;
+
+
+// get single box by id
+export const QUERY_BOX = gql`
+  query Box($boxId: ID!) {
+  box(id: $boxId) {
+    _id
+    name
+    price
+    description
+    images
+  }
+}
+`;
+
+
+//get checkout
+export const QUERY_CHECKOUT = gql`
+query Checkout($box: [ID]!) {
+  checkout(box: $box) {
+    session
+  }
+}
+`;
 
