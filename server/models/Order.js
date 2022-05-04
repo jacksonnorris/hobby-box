@@ -20,7 +20,12 @@ const orderSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'Box',
       required: true,
-    }
+    },
+    frequency: {
+      type: Number,
+      ref: 'Box',
+      required: true,
+    },
   }
 );
 
