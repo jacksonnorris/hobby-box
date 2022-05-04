@@ -57,3 +57,16 @@ footer {
   justify-content: space-between;
   margin: 0 auto;
 }
+
+.cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+
+}
+
+.card {
+  padding: 20px;
+  text-align: center;
+}

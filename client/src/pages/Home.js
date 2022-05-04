@@ -41,7 +41,7 @@ const Home = () => {
         {renderUsername()}
       </div>
       <h2>Check out our amazing products!</h2>
-      <div>
+      <div className='cardWrapper'>
         {renderProducts()}
       </div>
     </main>
