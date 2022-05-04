@@ -1,17 +1,7 @@
 import { gql } from '@apollo/client';
 
-export const LOGIN_USER = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-      token
-      user {
-        _id
-        username
-      }
-    }
-  }
-`;
-
+// addUser
+// email:String!, username:String!, password:String!): Auth
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
@@ -24,11 +14,29 @@ export const ADD_USER = gql`
   }
 `;
 
+// login
+// email:String!, password:String!): Auth
+export const LOGIN_USER = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
+  }
+`;
+
+
 // UpdateUser
+// username: String, email: String, password: String, address: String, shipping: String, orders: [OrderInputs]): User
 
 // removeUser
+// (_id: ID!): User
 
 // addOrder
+// box: ID!): Order
 export const ADD_THOUGHT = gql`
   mutation addThought($thoughtText: String!) {
     addThought(thoughtText: $thoughtText) {
@@ -44,21 +52,5 @@ export const ADD_THOUGHT = gql`
   }
 `;
 
-// cancelOrder
-
-// addReview (if there is time/future development??)
-export const ADD_COMMENT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        createdAt
-      }
-    }
-  }
-`;
+// updateOrder
+// price: Float, box: BoxInputs, frequency: Int): Order
