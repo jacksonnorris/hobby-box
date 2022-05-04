@@ -28,18 +28,20 @@ export const LOGIN_USER = gql`
 
 // Update User
 export const UPDATE_USER = gql`
-  mutation updateUser($_id: ID!, $username: String, $email: String, $password: String, $address: String, $shipping: String, $orders: [OrderInputs]) {
+  mutation updateUser($_id: ID!, $address: String, $shipping: String, $orders: [OrderInputs]) {
     updateUser(_id: $id) {
       user {
         _id
         username
+        address
+        shipping
+        orders
       }
     }
   }
 `;
 
-// removeUser
-// (_id: ID!): User
+// Remove User
 export const REMOVE_USER = gql`
   mutation removeUser($_id: ID!) {
     addUser(_id: $id) {
@@ -51,7 +53,7 @@ export const REMOVE_USER = gql`
   }
 `;
 
-// addOrder
+// Add Order
 export const ADD_ORDER = gql`
   mutation addOrder($box: [ID]!) {
     addOrder(box: $box) {
@@ -72,28 +74,15 @@ export const ADD_ORDER = gql`
   }
 `;
 
-export const ADD_THOUGHT = gql`
-  mutation addThought($thoughtText: String!) {
-    addThought(thoughtText: $thoughtText) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-      }
-    }
-  }
-`;
-
 // Update Order
 export const UPDATE_ORDER = gql`
-  mutation updateOrder($_id: ID!, $username: String, $email: String, $password: String, $address: String, $shipping: String, $orders: [OrderInputs]) {
+  mutation updateOrder($price: Float, $box: BoxInputs, $frequency: Int) {
     updateOrder(_id: $id) {
-      user {
+      order {
         _id
-        username
+        price
+        box
+        frequency
       }
     }
   }
