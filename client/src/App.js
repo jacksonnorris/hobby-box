@@ -20,6 +20,7 @@ import Categories from './pages/Categories';
 import OrderConfirmation from './pages/OrderConfirmation';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { StoreProvider } from './utils/GlobalState';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -51,6 +52,8 @@ function App() {
       <Router>
         <>
           <Header />
+          <div>
+          <StoreProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -65,6 +68,8 @@ function App() {
             <Route path="/me" element={<Profile />} />
             <Route path="/users/:id" element={<Profile />} />
           </Routes>
+          </StoreProvider>
+          </div>
           <Footer />
         </>
       </Router>

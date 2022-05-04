@@ -86,7 +86,7 @@ const typeDefs = gql`
     me: User
     orders: [Order]
     boxes: [Box]
-    box(_id: ID!): Box
+    box(id: ID!): Box
     checkout(box: [ID]!): Checkout
   }
 
