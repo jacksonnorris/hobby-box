@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 // ***this is what we would do in apollo sandbox:
 
-// getAllUsers
+// get All Users
 export const QUERY_USERS = gql`
   query users {
     users {
@@ -12,7 +12,7 @@ export const QUERY_USERS = gql`
     }
   }
 `;
-// getSingleUser 
+// get Single User by ID 
 export const QUERY_USER = gql`
   query user($id: ID!) {
     user(id: $id) {
@@ -34,7 +34,7 @@ export const QUERY_ME = gql`
   }
 `;
 
-// // validateUser
+// // get Orders
 // export const QUERY_VALIDATE_USER = gql`
 //   query validate {
 //     validate {
@@ -46,7 +46,7 @@ export const QUERY_ME = gql`
 //   }
 //   `;
   
-// getAllOrders
+// get All Boxes
   // export const TBD = gql`
   // query TBD {
   //   TBD {
@@ -59,7 +59,7 @@ export const QUERY_ME = gql`
   // `;
 
 
-  // getAllInterests
+  // get single box by id
   // export const TBD = gql`
   // query TBD {
   //   TBD {
@@ -70,33 +70,9 @@ export const QUERY_ME = gql`
   //   }
   // }
   // `;
-
-   // getSingleInterest
-  // export const TBD = gql`
-  // query TBD {
-  //   TBD {
-  //   #properties go here:
-  //     _id
-  //     username
-  //     email
-  //   }
-  // }
-  // `;
-
-     // getAllBoxes
-  // export const TBD = gql`
-  // query TBD {
-  //   TBD {
-  //   #properties go here:
-  //     _id
-  //     username
-  //     email
-  //   }
-  // }
-  // `;
-
   
-     // getSingleBox
+
+   // get checkout
   // export const TBD = gql`
   // query TBD {
   //   TBD {
@@ -107,3 +83,4 @@ export const QUERY_ME = gql`
   //   }
   // }
   // `;
+
