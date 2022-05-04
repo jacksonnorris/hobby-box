@@ -34,6 +34,16 @@ export const QUERY_ME = gql`
   }
 `;
 
+export const QUERY_BOXES = gql`
+  query boxes {
+    boxes {
+      _id
+      name
+      images
+    }
+  }
+`;
+
 // // get Orders
 // export const QUERY_VALIDATE_USER = gql`
 //   query validate {

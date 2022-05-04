@@ -18,7 +18,7 @@ const UserList = ({ users, title }) => {
 
   const renderUsers = () => {
     if (!users) return null;
-    return users.map(user => <User key={user._id} {...user} />);
+    return users.map(user => <User {...user} />);
   }
 
   return (
