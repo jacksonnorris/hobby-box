@@ -5,7 +5,7 @@
       "24.99",
       "49.99"
     ],
-    "description": "$25 mystery box",
+    "description": "Keyboard enthusiast mystery box",
     "images": [
       "https://via.placeholder.com/150"
     ],
@@ -18,12 +18,12 @@
     "pastBox": []
   },
   {
-    "name": "D&D- Dungeons & Dragons",
+    "name": "Dungeons & Dragons",
     "price": [
       "24.99",
       "49.99"
     ],
-    "description": "$25 mystery box",
+    "description": "Dungeons and Dragons mystery box",
     "images": [
       "https://via.placeholder.com/150"
     ],
@@ -41,7 +41,7 @@
       "24.99",
       "49.99"
     ],
-    "description": "$25 mystery box",
+    "description": "Arts and crafts boxes",
     "images": [
       "https://via.placeholder.com/150"
     ],
@@ -59,7 +59,7 @@
       "24.99",
       "49.99"
     ],
-    "description": "$25 mystery box",
+    "description": "Gardening mystery box",
     "images": [
       "https://via.placeholder.com/150"
     ],
@@ -77,7 +77,7 @@
       "24.99",
       "49.99"
     ],
-    "description": "$25 mystery box",
+    "description": "Mystery book box",
     "images": [
       "https://via.placeholder.com/150"
     ],
@@ -95,7 +95,7 @@
       "24.99",
       "49.99"
     ],
-    "description": "$25 mystery box",
+    "description": "Mystery beer/wine box",
     "images": [
       "https://via.placeholder.com/150"
     ],
