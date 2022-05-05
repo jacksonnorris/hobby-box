@@ -63,7 +63,6 @@ footer {
   flex-wrap: wrap;
   max-width: 80%;
   margin: 0 auto;
-
 }
 
 .card {
@@ -73,4 +72,21 @@ footer {
 
 .card:hover {
   cursor: pointer;
+}
+
+.productPage {
+  margin-top: 20px;
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+.productContent {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.productContent span {
+  margin: 0 10px;
+  white-space: pre-wrap;
 }
