@@ -12,13 +12,21 @@ const ProductPage = () => {
 
   const box = data?.box;
 
+  const breakline = '\u000A';
+
   if (loading) {
     return <span>Loading</span>;
   }
   return (
-    <div className='productPage'>
-      {box.name}
-    </div>
+    <main>
+      <div className='productPage'>
+        <h3>{box.name} Box</h3>
+        <div className='productContent'>
+          <img src={box.images[0]} alt={box.name} />
+          <span>{box.description} {breakline}This box is available for {box.price}</span>
+        </div>
+      </div>
+    </main>
   )
 }
 
