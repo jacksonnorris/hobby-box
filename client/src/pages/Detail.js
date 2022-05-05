@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-
+// NEED CART
 import Cart from '../components/Cart';
 import { useStoreContext } from '../utils/GlobalState';
 import {
   REMOVE_FROM_CART,
-  UPDATE_CART_QUANTITY,
   ADD_TO_CART,
-  UPDATE_PRODUCTS,
 } from '../utils/actions';
-import { QUERY_PRODUCTS } from '../utils/queries';
+import { QUERY_BOXES } from '../utils/queries';
+// NEED HELPERS.JS
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
@@ -20,36 +19,36 @@ function Detail() {
 
   const [currentProduct, setCurrentProduct] = useState({});
 
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, data } = useQuery(QUERY_BOXES);
 
-  const { products, cart } = state;
+  const { boxes, cart } = state;
 
   useEffect(() => {
     // already in global store
-    if (products.length) {
-      setCurrentProduct(products.find((product) => product._id === id));
+    if (boxes.length) {
+      setCurrentProduct(boxes.find((box) => box._id === id));
     }
     // retrieved from server
-    else if (data) {
-      dispatch({
-        type: UPDATE_PRODUCTS,
-        products: data.products,
-      });
+    // else if (data) {
+    //   dispatch({
+    //     type: UPDATE_BOXES,
+    //     products: data.products,
+    //   });
 
-      data.products.forEach((product) => {
-        idbPromise('products', 'put', product);
-      });
-    }
+    //   data.products.forEach((product) => {
+    //     idbPromise('products', 'put', product);
+    //   });
+    // }
     // get cache from idb
     else if (!loading) {
-      idbPromise('products', 'get').then((indexedProducts) => {
+      idbPromise('boxes', 'get').then((indexedBoxes) => {
         dispatch({
-          type: UPDATE_PRODUCTS,
-          products: indexedProducts,
+          type: UPDATE_BOXES,
+          boxes: indexedBoxes,
         });
       });
     }
-  }, [products, data, loading, dispatch, id]);
+  }, [boxes, data, loading, dispatch, id]);
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
