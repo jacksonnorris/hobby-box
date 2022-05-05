@@ -103,3 +103,11 @@ footer {
     max-width: 30%;
   }
 }
+
+button {
+  background-color: #F4F1DE;
+  color: #3D405B;
+  border: 2px #3D405B solid;
+  padding: 10px;
+  border-radius: 4px;
+}

@@ -5,6 +5,7 @@ import { QUERY_BOX } from '../utils/queries';
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
+import Cart from "../components/Cart";
 
 
 const ProductPage = () => {
@@ -48,11 +49,12 @@ const ProductPage = () => {
   return (
     <main>
       <div className='productPage'>
+        <Cart />
         <h3>{box.name} Box</h3>
         <div className='productContent'>
           <img src={box.images[0]} alt={box.name} />
-          <span>{box.description} {breakline}This box is available for {box.price}</span>
-          <button onClick={addToCart}>Add to cart</button>
+          <span>{box.description} {breakline}This box is available for {box.price}{breakline}<button onClick={addToCart}>Add to cart</button></span>
+
         </div>
       </div>
     </main>
