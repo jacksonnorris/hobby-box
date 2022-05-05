@@ -41,7 +41,7 @@ const Cart = () => {
   function calculateTotal() {
     let sum = 0;
     state.cart.forEach((item) => {
-      sum += item.price * item.purchaseQuantity;
+      sum += item.price * item.frequency;
     });
     return sum.toFixed(2);
   }
@@ -50,7 +50,7 @@ const Cart = () => {
     const productIds = [];
 
     state.cart.forEach((item) => {
-      for (let i = 0; i < item.purchaseQuantity; i++) {
+      for (let i = 0; i < item.frequency; i++) {
         productIds.push(item._id);
       }
     });
