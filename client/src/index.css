@@ -63,11 +63,13 @@ footer {
   flex-wrap: wrap;
   max-width: 80%;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .card {
   padding: 20px;
   text-align: center;
+  max-width: 400px;
 }
 
 .card:hover {
@@ -84,9 +86,20 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .productContent span {
   margin: 0 10px;
   white-space: pre-wrap;
+}
+
+@media (min-width: 1024px) {
+  .productContent img {
+    max-width: 60%;
+  }
+
+  .productContent span {
+    max-width: 30%;
+  }
 }

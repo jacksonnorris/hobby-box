@@ -5,9 +5,9 @@
       "24.99",
       "49.99"
     ],
-    "description": "Keyboard enthusiast mystery box",
+    "description": "This Keyboard Enthusiast Mystery Box is filled with all sorts of parts, components, and tools that every mechanical keyboard lover will love to use! The Tier 1 box offers items like switch openers, switch lube, switch trays, mousepads, and deskmats. The tier 2 box offers switches, keycaps, custom coiled cables, and more!",
     "images": [
-      "https://via.placeholder.com/150"
+      "/assets/keyboardBox.png"
     ],
     "frequency": [
       1,
@@ -25,7 +25,7 @@
     ],
     "description": "Dungeons and Dragons mystery box",
     "images": [
-      "https://via.placeholder.com/150"
+      "/assets/keyboardBox.png"
     ],
     "frequency": [
       1,
@@ -43,7 +43,7 @@
     ],
     "description": "Arts and crafts boxes",
     "images": [
-      "https://via.placeholder.com/150"
+      "/assets/keyboardBox.png"
     ],
     "frequency": [
       1,
@@ -61,7 +61,7 @@
     ],
     "description": "Gardening mystery box",
     "images": [
-      "https://via.placeholder.com/150"
+      "/assets/keyboardBox.png"
     ],
     "frequency": [
       1,
@@ -79,7 +79,7 @@
     ],
     "description": "Mystery book box",
     "images": [
-      "https://via.placeholder.com/150"
+      "/assets/keyboardBox.png"
     ],
     "frequency": [
       1,
@@ -97,7 +97,7 @@
     ],
     "description": "Mystery beer/wine box",
     "images": [
-      "https://via.placeholder.com/150"
+      "/assets/keyboardBox.png"
     ],
     "frequency": [
       1,
