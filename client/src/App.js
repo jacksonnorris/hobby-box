@@ -20,6 +20,7 @@ import Categories from './pages/Categories';
 import OrderConfirmation from './pages/OrderConfirmation';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ProductPage from './pages/ProductPage';
 import { StoreProvider } from './utils/GlobalState';
 
 // Construct our main GraphQL API endpoint
@@ -53,22 +54,23 @@ function App() {
         <>
           <Header />
           <div>
-          <StoreProvider>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/orderconfirmation" element={<OrderConfirmation />} />
-            <Route path="/myaccount" element={<MyAccount />} />
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/box" element={<Box />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/me" element={<Profile />} />
-            <Route path="/users/:id" element={<Profile />} />
-          </Routes>
-          </StoreProvider>
+            <StoreProvider>
+              <Routes>
+                <Route path='/products/:boxId' element={<ProductPage />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/aboutus" element={<AboutUs />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/orderconfirmation" element={<OrderConfirmation />} />
+                <Route path="/myaccount" element={<MyAccount />} />
+                <Route path="/categories" element={<Categories />} />
+                <Route path="/box" element={<Box />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/me" element={<Profile />} />
+                <Route path="/users/:id" element={<Profile />} />
+              </Routes>
+            </StoreProvider>
           </div>
           <Footer />
         </>
