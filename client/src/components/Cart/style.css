@@ -1,11 +1,11 @@
 .cart {
   position: fixed;
-  top: 0;
+  top: 50px;
   right: 0;
   min-width: 20%;
   max-width: 30%;
   max-height: 60%;
-  background-color: var(--light);
+  background-color: rgba(255, 255, 255, 1);
   overflow: auto;
   padding: .5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
@@ -33,7 +33,7 @@
 
 .cart-closed {
   position: fixed;
-  top: 2%;
+  top: 5%;
   right: 1%;
   font-size: 2rem;
   cursor: pointer;
