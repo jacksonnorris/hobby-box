@@ -7,6 +7,7 @@ import { QUERY_BOXES } from '../utils/queries';
 // Components
 // import UserList from '../components/UserList';
 import Products from '../components/Products';
+import Cart from "../components/Cart";
 
 const Home = () => {
   // const { loading, data } = useQuery(QUERY_USERS);
@@ -39,6 +40,7 @@ const Home = () => {
     <main>
       <div className="flex-row justify-center">
         {renderUsername()}
+        <Cart />
       </div>
       <h2>Check out our amazing products!</h2>
       <div className='cardWrapper'>

@@ -1,3 +1,4 @@
+
 // MAY NOT BE NECESSARY
 export function pluralize(name, count) {
   if (count === 1) {
@@ -36,6 +37,7 @@ export function idbPromise(storeName, method, object) {
           break;
         case 'get':
           const all = store.getAll();
+
           all.onsuccess = function () {
             resolve(all.result);
           };
@@ -47,6 +49,7 @@ export function idbPromise(storeName, method, object) {
           console.log('No valid method');
           break;
       }
+
 
       tx.oncomplete = function () {
         db.close();
