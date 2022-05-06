@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import Auth from '../utils/auth';
 import { QUERY_BOXES, QUERY_USERS } from '../utils/queries';
 // Components
- import UserList from '../components/UserList';
+//  import UserList from '../components/UserList';
 import Products from '../components/Products';
 import Cart from "../components/Cart";
 
@@ -13,13 +13,13 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_USERS);
   const users = data?.users || [];
 
-  const renderUserList = () => {
-    if (loading) {
-      return <h2>Loading...</h2>
-    } else {
-      return <UserList users={users} title="List of Users" />
-    }
-  }
+//   const renderUserList = () => {
+//     if (loading) {
+//       return <h2>Loading...</h2>
+//     } else {
+//       return <UserList users={users} title="List of Users" />
+//     }
+//   }
 
   const renderUsername = () => {
     if (!Auth.loggedIn()) return null;
