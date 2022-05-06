@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Box } = require('../models');
+const { User, Box, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -37,17 +37,20 @@ const resolvers = {
       return Box.findOne({ _id: args.id });
     },
     checkout: async (parent, args, context) => {
+      console.log('checking out')
       // This snippet allows us to use the base URL to fetch images (not necessary for Project 3)
       const url = new URL(context.headers.referer).origin;
 
       // Create new instance of order with associated products passed into products array
-      const order = new Order({ box: args.box });
-
+      const order = new Order({ products: args.products });
+      console.log('order', order);
       // This array is for collecting prices and quantity of each product
       const line_items = [];
 
       // Populating product data for order screen
       const { box } = await order.populate('box');
+
+      console.log(box);
 
       // This loop creates the line items for each product using name, description, and image properties
       for (let i = 0; i < box.length; i++) {
