@@ -88,8 +88,8 @@ export const QUERY_BOX = gql`
 
 //get checkout
 export const QUERY_CHECKOUT = gql`
-query Checkout($boxId: [ID]!) {
-  checkout(box: $boxId) {
+query getCheckout($products: [ID]!) {
+  checkout(products: $products) {
     session
   }
 }

@@ -12,26 +12,20 @@ const typeDefs = gql`
   }
 
   type Auth {
-    token: ID!
+    token: ID
     user: User
   }
 
   type Order {
     _id: ID
-    user: User
-    name: String!
-    price: Float!
-    box: Box!
-    frequency: Int!
+    purchaseDate: String
+    products: [Box]
   }
 
   input OrderInputs {
     _id: ID
-    user: UserInputs
-    name: String!
-    price: Float!
-    box: BoxInputs!
-    frequency: Int!
+    purchaseDate: String
+    products: [BoxInputs]
   }
 
   input UserInputs {
@@ -87,7 +81,7 @@ const typeDefs = gql`
     orders: [Order]!
     boxes: [Box]!
     box(id: ID!): Box
-    checkout(box: [ID]!): Checkout
+    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
