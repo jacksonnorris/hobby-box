@@ -6,7 +6,7 @@
     ],
     "description": "This Keyboard Enthusiast Mystery Box is filled with all sorts of parts, components, and tools that every mechanical keyboard lover will love to use! The Tier 1 box offers items like switch openers, switch lube, switch trays, mousepads, and deskmats. The tier 2 box offers switches, keycaps, custom coiled cables, and more!",
     "images": [
-      "/assets/keyboardBox.png"
+      "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
     "frequency": [
       1,
@@ -20,11 +20,10 @@
     "name": "Dungeons & Dragons",
     "price": [
       "24.99"
-      
     ],
     "description": "Dungeons and Dragons mystery box",
     "images": [
-      "/assets/keyboardBox.png"
+      "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
     "frequency": [
       1,
@@ -38,11 +37,10 @@
     "name": "Arts & Crafts",
     "price": [
       "24.99"
-      
     ],
     "description": "Arts and crafts boxes",
     "images": [
-      "/assets/keyboardBox.png"
+      "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
     "frequency": [
       1,
@@ -56,11 +54,10 @@
     "name": "Gardening",
     "price": [
       "24.99"
-      
     ],
     "description": "Gardening mystery box",
     "images": [
-      "/assets/plantBox.png"
+      "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
     "frequency": [
       1,
@@ -74,11 +71,10 @@
     "name": "Books",
     "price": [
       "24.99"
-      
     ],
     "description": "Mystery book box",
     "images": [
-      "/assets/keyboardBox.png"
+      "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
     "frequency": [
       1,
@@ -92,11 +88,10 @@
     "name": "Beer/Wine",
     "price": [
       "24.99"
-      
     ],
     "description": "Mystery beer/wine box",
     "images": [
-      "/assets/keyboardBox.png"
+      "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
     "frequency": [
       1,
