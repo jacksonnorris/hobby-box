@@ -21,7 +21,9 @@ function Detail() {
 
   const { loading, data } = useQuery(QUERY_BOXES);
 
-  const { boxes, cart } = state;
+  const boxes = data?.boxes || [];
+
+  const { cart } = state;
 
   // THIS is a conditional to check if there are boxes in the IndexedDB database
   useEffect(() => {

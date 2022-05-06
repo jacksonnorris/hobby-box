@@ -7,21 +7,22 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { StoreProvider } from './utils/GlobalState';
 
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
-import MyAccount from './pages/MyAccount';
-import Checkout from './pages/Checkout';
-import AboutUs from './pages/AboutUs';
-import Box from './pages/Box';
-import Categories from './pages/Categories';
-import OrderConfirmation from './pages/OrderConfirmation';
+// import MyAccount from './pages/MyAccount';
+// import Checkout from './pages/Checkout';
+// import AboutUs from './pages/AboutUs';
+// import Box from './pages/Box';
+// import Categories from './pages/Categories';
+// import OrderConfirmation from './pages/OrderConfirmation';
+// import ProductPage from './pages/ProductPage';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ProductPage from './pages/ProductPage';
-import { StoreProvider } from './utils/GlobalState';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -56,19 +57,20 @@ function App() {
           <div>
             <StoreProvider>
               <Routes>
-                <Route path='/products/:boxId' element={<ProductPage />} />
                 <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/me" element={<Profile />} />
+              <Route path="/users/:id" element={<Profile />} /> 
+                {/* <Route path='/products/:boxId' element={<ProductPage />} />
+                
                 <Route path="/aboutus" element={<AboutUs />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/orderconfirmation" element={<OrderConfirmation />} />
                 <Route path="/myaccount" element={<MyAccount />} />
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/box" element={<Box />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/me" element={<Profile />} />
-                <Route path="/users/:id" element={<Profile />} />
+                */}
               </Routes>
             </StoreProvider>
           </div>

@@ -3,36 +3,38 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 // Utilities
 import Auth from '../utils/auth';
-import { QUERY_BOXES } from '../utils/queries';
+import { QUERY_BOXES, QUERY_USERS } from '../utils/queries';
 // Components
-// import UserList from '../components/UserList';
+ import UserList from '../components/UserList';
 import Products from '../components/Products';
 import Cart from "../components/Cart";
 
 const Home = () => {
-  // const { loading, data } = useQuery(QUERY_USERS);
-  // const users = data?.users || [];
+  const { loading, data } = useQuery(QUERY_USERS);
+  const users = data?.users || [];
 
-  // const renderUserList = () => {
-  //   if (loading) {
-  //     return <h2>Loading...</h2>
-  //   } else {
-  //     return <UserList users={users} title="List of Users" />
-  //   }
-  // }
+  const renderUserList = () => {
+    if (loading) {
+      return <h2>Loading...</h2>
+    } else {
+      return <UserList users={users} title="List of Users" />
+    }
+  }
 
   const renderUsername = () => {
     if (!Auth.loggedIn()) return null;
     return Auth.getProfile().data.username;
   }
 
-  const { loading, data } = useQuery(QUERY_BOXES);
-  console.log(data);
+  const { loading: boxesLoading,  data: boxesData } = useQuery(QUERY_BOXES);
+  const boxes = boxesData?.boxes || [];
+  console.log(boxes);
+
   const renderProducts = () => {
-    if (loading) {
+    if (loading || boxesLoading){
       return <h2>Loading...</h2>
     } else {
-      return <Products products={data} title="List of Products" />
+      return <Products products={boxes} title="List of Products" />
     }
   }
 
