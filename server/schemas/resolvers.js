@@ -48,21 +48,19 @@ const resolvers = {
       const line_items = [];
 
       // Populating product data for order screen
-      const { box } = await order.populate('box');
-
-      console.log(box);
+      const { products } = await order.populate('products');
 
       // This loop creates the line items for each product using name, description, and image properties
-      for (let i = 0; i < box.length; i++) {
-        const box = await stripe.box.create({
-          name: box[i].name,
-          description: box[i].description,
-          images: [`${url}/images/${box[i].image}`]
+      for (let i = 0; i < products.length; i++) {
+        const product = await stripe.products.create({
+          name: products[i].name,
+          description: products[i].description,
+          images: [`${products[i].images}`]
         });
         // This portion of the loop uses product's price property to create price association to single line items
         const price = await stripe.prices.create({
-          box: box.id,
-          unit_amount: box[i].price * 100,
+          product: product.id,
+          unit_amount: products[i].price * 100,
           currency: 'usd',
         });
         // Adds each price and quantity to the line_items array
@@ -81,7 +79,6 @@ const resolvers = {
         cancel_url: `${url}/`
       });
 
-      // Why is this returned?
       return { session: session.id };
     }
   },
@@ -122,10 +119,10 @@ const resolvers = {
       }
       throw new AuthenticationError('No user found.');
     },
-    addOrder: async (parent, { box }, context) => {
+    addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {
-        const order = new Order({ box });
+        const order = new Order({ products });
 
         await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 

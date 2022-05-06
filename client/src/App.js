@@ -16,7 +16,7 @@ import Profile from './pages/Profile';
 import Checkout from './pages/Checkout';
 import AboutUs from './pages/AboutUs';
 import Categories from './pages/Categories';
-import OrderConfirmation from './pages/OrderConfirmation';
+import Success from './pages/OrderConfirmation';
 import ProductPage from './pages/ProductPage';
 
 import Header from './components/Header';
@@ -63,7 +63,7 @@ function App() {
                 <Route path='/products/:boxId' element={<ProductPage />} />
                 <Route path="/aboutus" element={<AboutUs />} />
                 <Route path="/checkout" element={<Checkout />} />
-                <Route path="/orderconfirmation" element={<OrderConfirmation />} />
+                <Route path="/success" element={<Success />} />
                 <Route path="/categories" element={<Categories />} />
               </Routes>
             </StoreProvider>
