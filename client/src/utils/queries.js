@@ -6,12 +6,12 @@ import { gql } from '@apollo/client';
 export const QUERY_USERS = gql`
   query users {
     users {
-      _id
-      username
-      email
-      password
-      address
-      shipping
+    _id
+    username
+    email
+    password
+    address
+    shipping
     }
   }
 `;
@@ -88,8 +88,8 @@ export const QUERY_BOX = gql`
 
 //get checkout
 export const QUERY_CHECKOUT = gql`
-query Checkout($box: [ID]!) {
-  checkout(box: $box) {
+query Checkout($boxId: [ID]!) {
+  checkout(box: $boxId) {
     session
   }
 }

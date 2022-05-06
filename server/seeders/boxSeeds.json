@@ -2,8 +2,7 @@
   {
     "name": "Keyboards",
     "price": [
-      "24.99",
-      "49.99"
+      "24.99"
     ],
     "description": "This Keyboard Enthusiast Mystery Box is filled with all sorts of parts, components, and tools that every mechanical keyboard lover will love to use! The Tier 1 box offers items like switch openers, switch lube, switch trays, mousepads, and deskmats. The tier 2 box offers switches, keycaps, custom coiled cables, and more!",
     "images": [
@@ -20,8 +19,8 @@
   {
     "name": "Dungeons & Dragons",
     "price": [
-      "24.99",
-      "49.99"
+      "24.99"
+      
     ],
     "description": "Dungeons and Dragons mystery box",
     "images": [
@@ -38,8 +37,8 @@
   {
     "name": "Arts & Crafts",
     "price": [
-      "24.99",
-      "49.99"
+      "24.99"
+      
     ],
     "description": "Arts and crafts boxes",
     "images": [
@@ -56,8 +55,8 @@
   {
     "name": "Gardening",
     "price": [
-      "24.99",
-      "49.99"
+      "24.99"
+      
     ],
     "description": "Gardening mystery box",
     "images": [
@@ -74,8 +73,8 @@
   {
     "name": "Books",
     "price": [
-      "24.99",
-      "49.99"
+      "24.99"
+      
     ],
     "description": "Mystery book box",
     "images": [
@@ -92,8 +91,8 @@
   {
     "name": "Beer/Wine",
     "price": [
-      "24.99",
-      "49.99"
+      "24.99"
+      
     ],
     "description": "Mystery beer/wine box",
     "images": [
