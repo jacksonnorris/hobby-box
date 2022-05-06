@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <div>
         <Link to="/">
-          <img className='headerImg' src='assets/hobbyBoxLogo.png' alt='Logo' />
+          <img className='headerImg' src='https://res.cloudinary.com/dfamiaufc/image/upload/v1651870362/Hobby%20Box/hobbyboxLogo_oys0lf.png' alt='Logo' />
         </Link>
         <span className='nav nav-spacer'></span>
         <span className='nav nav-links'>
