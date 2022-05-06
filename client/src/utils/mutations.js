@@ -54,13 +54,13 @@ export const REMOVE_USER = gql`
 `;
 
 // Add Order
+// THIS COULD BE WRONG
 export const ADD_ORDER = gql`
   mutation addOrder($box: [ID]!) {
     addOrder(box: $box) {
       user
       name
       price
-      box
       frequency
       box {
         name
