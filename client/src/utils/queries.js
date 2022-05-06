@@ -6,12 +6,12 @@ import { gql } from '@apollo/client';
 export const QUERY_USERS = gql`
   query users {
     users {
-    _id
-    username
-    email
-    password
-    address
-    shipping
+      _id
+      username
+      email
+      password
+      address
+      shipping
     }
   }
 `;
@@ -41,47 +41,48 @@ export const QUERY_ME = gql`
 
 export const QUERY_ORDERS = gql`
   query Orders {
-  orders {
-    _id
-    price
-    frequency
-    user {
+    orders {
       _id
-      address
-      shipping
+      price
+      frequency
+      user {
+        _id
+        address
+        shipping
+      }
     }
   }
-}
 `;
 
 
 
 
+// query Boxes {
 //get All Boxes
 export const QUERY_BOXES = gql`
-  query Boxes {
-  boxes {
-    _id
-    name
-    price
-    description
-    images
+  query boxes {
+    boxes {
+      _id
+      name
+      price
+      description
+      images
+    }
   }
-}
 `;
 
 
 // get single box by id
 export const QUERY_BOX = gql`
   query Box($boxId: ID!) {
-  box(id: $boxId) {
-    _id
-    name
-    price
-    description
-    images
+    box(id: $boxId) {
+      _id
+      name
+      price
+      description
+      images
+    }
   }
-}
 `;
 
 

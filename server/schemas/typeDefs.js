@@ -63,9 +63,9 @@ const typeDefs = gql`
   type Box {
     _id: ID
     name: String!
-    price: [Float!]
+    price: [Float]!
     description: String!
-    images: [String!]
+    images: [String]!
     pastBox: [PastBox]
     frequency: [Int]
   }
@@ -84,8 +84,8 @@ const typeDefs = gql`
     users: [User]
     user(id: ID!): User
     me: User
-    orders: [Order]
-    boxes: [Box]
+    orders: [Order]!
+    boxes: [Box]!
     box(id: ID!): Box
     checkout(box: [ID]!): Checkout
   }
