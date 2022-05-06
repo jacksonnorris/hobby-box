@@ -69,7 +69,6 @@ function App() {
                 <Route path="/myaccount" element={<MyAccount />} />
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/box" element={<Box />} />
-
               </Routes>
             </StoreProvider>
           </div>

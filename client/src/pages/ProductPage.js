@@ -10,27 +10,29 @@ import { QUERY_BOXES } from '../utils/queries';
 
 
 const ProductPage = () => {
+  const { boxId } = useParams();
   const [state, dispatch] = useStoreContext();
-  const { id } = useParams();
   const { cart, products } = state;
-  
   const [currentProduct, setCurrentProduct] = useState({});
-
   const { loading, data } = useQuery(QUERY_BOXES);
-
+  const { loading: loadingBox, data: dataBox } = useQuery(QUERY_BOX, {
+    variables: { boxId: boxId },
+  });
+  const boxes = data?.boxes || [];
+  const box = dataBox?.box;
   useEffect(() => {
     // already in global store
-    if (products.length) {
-      setCurrentProduct(products.find((product) => product._id === id));
+    if (boxes.length) {
+      setCurrentProduct(boxes.find((box) => box._id === boxId));
     }
     // retrieved from server
-    else if (data) {
+    else if (boxes) {
       dispatch({
         type: UPDATE_PRODUCTS,
-        products: data.products,
+        products: boxes,
       });
 
-      data.boxes.forEach((product) => {
+      boxes.forEach((product) => {
         idbPromise('products', 'put', product);
       });
     }
@@ -43,15 +45,12 @@ const ProductPage = () => {
         });
       });
     }
-  }, [products, data, loading, dispatch, id]);
+  }, [boxes, loading, dispatch, boxId]);
 
-  const { boxId } = useParams();
-  const { loading: loadingBox, data: dataBox } = useQuery(QUERY_BOX, {
-    variables: { boxId: boxId },
-  });
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === boxId)
+    console.log(addToCart, "ADD TO CART");
     if (itemInCart) {
       dispatch({
         type: UPDATE_CART_QUANTITY,
@@ -71,11 +70,6 @@ const ProductPage = () => {
     }
   }
 
-
-  const box = dataBox?.box;
-
-  const breakline = '\u000A';
-
   if (loadingBox) {
     return <span>Loading</span>;
   }
@@ -86,8 +80,9 @@ const ProductPage = () => {
         <h3>{box.name} Box</h3>
         <div className='productContent'>
           <img src={box.images[0]} alt={box.name} />
-          <span>{box.description} {breakline}This box is available for {box.price}{breakline}<button onClick={addToCart}>Add to cart</button></span>
-
+          <p>{box.description}</p>
+          <p>This box is available for {box.price}</p>
+          <p><button onClick={addToCart}>Add to cart</button></p>
         </div>
       </div>
     </main>

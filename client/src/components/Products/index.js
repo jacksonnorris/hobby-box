@@ -10,27 +10,28 @@ const Products = ({ products }) => {
   const [state, dispatch] = useStoreContext();
 
   // const { currentCategory } = state;
-
+  
   const { loading, data } = useQuery(QUERY_BOXES);
-  console.log('Data', data);
+  const boxes = data?.boxes || [];
   useEffect(() => {
-    if (data) {
+    if (boxes.length) {
+      console.log(boxes);
       dispatch({
         type: UPDATE_PRODUCTS,
-        products: data.boxes,
+        products: boxes,
       });
-      data.boxes.forEach((product) => {
+      boxes.forEach((product) => {
         idbPromise('products', 'put', product);
       });
     } else if (!loading) {
-      idbPromise('products', 'get').then((products) => {
+      idbPromise('products', 'get').then((boxes) => {
         dispatch({
           type: UPDATE_PRODUCTS,
-          products: products,
+          products: boxes,
         });
       });
     }
-  }, [data, loading, dispatch]);
+  }, [boxes, loading, dispatch]);
 
   console.log(products)
   if (!products) return null
