@@ -80,9 +80,11 @@ const ProductPage = () => {
         <h3>{box.name} Box</h3>
         <div className='productContent'>
           <img src={box.images[0]} alt={box.name} />
-          <p>{box.description}</p>
-          <p>This box is available for {box.price}</p>
-          <p><button onClick={addToCart}>Add to cart</button></p>
+          <div className='infoWrapper'>
+            <p>{box.description}</p>
+            <p>This box is available for {box.price}</p>
+            <p><button onClick={addToCart}>Add to cart</button></p>
+          </div>
         </div>
       </div>
     </main>
