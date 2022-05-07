@@ -11,11 +11,29 @@ const Signup = (props) => {
     username: '',
     email: '',
     password: '',
+    billingAddress: '',
+    shippingAddress: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    const { target } = event;
+
+    console.log('value length', value.length);
+
+    if (value.length === 0) {
+      target.classList.add('missing');
+      target.classList.remove('form-control');
+      const required = target.nextElementSibling
+      required.removeAttribute('hidden');
+    } else {
+      target.classList.add('form-control');
+      target.classList.remove('missing');
+      const removed = target.nextElementSibling
+      console.log(removed);
+      removed.setAttribute('hidden', 'hidden');
+    }
 
     setFormState({
       ...formState,
@@ -40,39 +58,73 @@ const Signup = (props) => {
   const renderForm = () => {
     if (data) {
       return (
-      <p>
-        Success! You may now head{' '}
-        <Link to="/">back to the homepage.</Link>
-      </p>
+        <p>
+          Success! You may now head{' '}
+          <Link to="/">back to the homepage.</Link>
+        </p>
       )
-    } 
+    }
     return (
-      <form onSubmit={handleFormSubmit}>
-        <input
-          placeholder="Your username"
-          name="username"
-          type="text"
-          value={formState.name}
-          onChange={handleChange}
-        />
-        <input
-          placeholder="Your email"
-          name="email"
-          type="email"
-          value={formState.email}
-          onChange={handleChange}
-        />
-        <input
-          placeholder="******"
-          name="password"
-          type="password"
-          value={formState.password}
-          onChange={handleChange}
-        />
+      <form class='form' onSubmit={handleFormSubmit}>
+        <div className="form-item">
+          <input
+            placeholder="Your username"
+            name="username"
+            type="text"
+            value={formState.name}
+            onChange={handleChange}
+            onBlur={handleChange}
+          />
+          <p className='warning mt-2' hidden>Required</p>
+        </div>
+        <div className="form-item">
+          <input
+            placeholder="Your email"
+            name="email"
+            type="email"
+            value={formState.email}
+            onChange={handleChange}
+            onBlur={handleChange}
+          />
+          <p className='warning mt-2' hidden>Required</p>
+        </div>
+        <div className="form-item">
+          <input
+            placeholder="******"
+            name="password"
+            type="password"
+            value={formState.password}
+            onChange={handleChange}
+            onBlur={handleChange}
+          />
+          <p className='warning mt-2' hidden>Required</p>
+        </div>
+        <div className="form-item">
+          <input
+            placeholder="Billing Address"
+            name="billingAddress"
+            type="text"
+            value={formState.billingAddress}
+            onChange={handleChange}
+            onBlur={handleChange}
+          />
+          <p className='warning mt-2' hidden>Required</p>
+        </div>
+        <div className="form-item">
+          <input
+            placeholder="Shipping Address"
+            name="shippingAddress"
+            type="text"
+            value={formState.shippingAddress}
+            onChange={handleChange}
+            onBlur={handleChange}
+          />
+          <p className='warning mt-2' hidden>Required</p>
+        </div>
         <button type="submit">
           Submit
         </button>
-      </form>
+      </form >
     );
   };
 
