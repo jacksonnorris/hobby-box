@@ -3,9 +3,8 @@
     "username": "testuser",
     "email": "test@user.com",
     "password": "password1234",
-    "address": "1234 road st.",
-    "shipping": "4321 street rd.",
-    "orders": [],
-    "paymentInfo": []
+    "billingAddress": "101 Southway Garden Road, Arden, NC 28704",
+    "shippingAddress": "101 Southway Garden Road, Arden, NC 28704",
+    "orders": []
   }
 ]
