@@ -37,13 +37,12 @@ const resolvers = {
       return Box.findOne({ _id: args.id });
     },
     checkout: async (parent, args, context) => {
-      console.log('checking out')
       // This snippet allows us to use the base URL to fetch images (not necessary for Project 3)
       const url = new URL(context.headers.referer).origin;
 
       // Create new instance of order with associated products passed into products array
       const order = new Order({ products: args.products });
-      console.log('order', order);
+
       // This array is for collecting prices and quantity of each product
       const line_items = [];
 
