@@ -44,6 +44,10 @@
   height: 50px;
 }
 
+.cart-closed span {
+  vertical-align: sub;
+}
+
 .cart-closed:hover {
   transform: rotate(8deg);
 }

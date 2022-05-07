@@ -14,7 +14,7 @@ main {
 }
 
 header {
-  background-color: #F4F1DE;
+  background-color: #264653;
   color: #3D405B;
 }
 
@@ -42,6 +42,11 @@ header>div {
 
 .nav-spacer {
   margin: 0 auto;
+}
+
+.heroImage {
+  height: 200px;
+  overflow: hidden;
 }
 
 h3,
@@ -129,8 +134,8 @@ footer {
 }
 
 button {
-  background-color: #F4F1DE;
-  color: #3D405B;
+  background-color: #264653;
+  color: #2a9d8f;
   border: 2px #3D405B solid;
   padding: 10px;
   border-radius: 4px;
