@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <main>
       <div className="flex-row justify-center">
-        <p>Hello, {renderUsername()}! Welcome to HobbyBox!</p>
+        <h2>Hello, {renderUsername()}! Welcome to HobbyBox!</h2>
         <Cart />
       </div>
       <h2>Check out our amazing products!</h2>
