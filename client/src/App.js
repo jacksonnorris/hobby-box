@@ -15,8 +15,7 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Checkout from './pages/Checkout';
 import AboutUs from './pages/AboutUs';
-import Categories from './pages/Categories';
-import Success from './pages/OrderConfirmation';
+import Success from './pages/Success';
 import ProductPage from './pages/ProductPage';
 
 import Header from './components/Header';
@@ -64,7 +63,6 @@ function App() {
                 <Route path="/aboutus" element={<AboutUs />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/success" element={<Success />} />
-                <Route path="/categories" element={<Categories />} />
               </Routes>
             </StoreProvider>
           </div>

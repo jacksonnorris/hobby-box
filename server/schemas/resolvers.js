@@ -21,9 +21,9 @@ const resolvers = {
     orders: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.box',
+          path: 'orders.products',
           // HERES THE DISASTER
-          populate: 'box'
+          // populate: 'box'
         });
 
         return user.orders.id(_id);
@@ -121,12 +121,12 @@ const resolvers = {
       throw new AuthenticationError('No user found.');
     },
     addOrder: async (parent, { products }, context) => {
-      console.log(context);
+      console.log('addOrder called');
       if (context.user) {
         const order = new Order({ products });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
-
+        const userOrder = await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+        console.log('userOrder', userOrder);
         return order;
       }
       throw new AuthenticationError('Something went wrong!');

@@ -40,10 +40,10 @@ const typeDefs = gql`
 
   input BoxInputs {
     _id: ID
-    name: String!
-    price: [Float!]
-    description: String!
-    images: [String!]
+    name: String
+    price: [Float]
+    description: String
+    images: [String]
     pastBox: [PastBoxInputs]
     frequency: [Int]
   }
@@ -56,10 +56,10 @@ const typeDefs = gql`
 
   type Box {
     _id: ID
-    name: String!
-    price: [Float]!
-    description: String!
-    images: [String]!
+    name: String
+    price: [Float]
+    description: String
+    images: [String]
     pastBox: [PastBox]
     frequency: [Int]
   }
@@ -89,7 +89,7 @@ const typeDefs = gql`
     login(email:String!, password:String!): Auth
     updateUser(username: String, email: String, password: String, address: String, shipping: String, orders: [OrderInputs]): User
     removeUser(_id: ID!): User
-    addOrder(box: ID!): Order
+    addOrder(products: [ID]!): Order
     updateOrder(price: Float, box: BoxInputs, frequency: Int): Order
   }
 `;
