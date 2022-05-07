@@ -37,10 +37,10 @@ function Success() {
           <h3>Order Details</h3>
           <p>Confirmation number: {currentOrder._id}</p>
           <p>Order placed: {new Date(+currentOrder.purchaseDate).toDateString()}</p>
-          <p>Expected Delivery set for:  {new Date(+currentOrder.purchaseDate + 604800).toDateString()}</p>
+          <p>Expected Delivery set for:  {new Date((+currentOrder.purchaseDate) + 604800).toDateString()}</p>
           <div>
-            {currentOrder.products.forEach((product) => {
-              return (<p>{product.name}</p>)
+            {currentOrder.products.map((product) => {
+              return (<p>{product._id}</p>)
             })}
           </div>
         </section>
