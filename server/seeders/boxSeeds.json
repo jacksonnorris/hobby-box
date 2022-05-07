@@ -19,9 +19,9 @@
   {
     "name": "Dungeons & Dragons",
     "price": [
-      "24.99"
+      "29.99"
     ],
-    "description": "Dungeons and Dragons mystery box",
+    "description": "Dungeons and Dragons also known as fantasy tabletop role-playing game. You can enjoy it by playing with your friends, add minatures to your collection or simply show off to your friends.",
     "images": [
       "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
@@ -34,11 +34,11 @@
     "pastBox": []
   },
   {
-    "name": "Arts & Crafts",
+    "name": "Arts & Crafts box", 
     "price": [
       "24.99"
     ],
-    "description": "Arts and crafts boxes",
+    "description": "Arts and Crafts box! Mysterry box is filled with traditioanl and modern arts and crafts. If you are into knitting, painting, journaling this mystery box is for you!",
     "images": [
       "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
@@ -51,11 +51,11 @@
     "pastBox": []
   },
   {
-    "name": "Gardening mystery box! If you are indoor or outdoor plant lover, we have the right plants for you. Our mystery box includes plants for any room in your home.",
+    "name": "Gardening",
     "price": [
       "80.99"
     ],
-    "description": "Gardening mystery box", 
+    "description": "Gardening mystery box! If you are indoor or outdoor plant lover, we have the right plants for you. Our mystery box includes plants for all your garden needs.",
     "images": [
       "https://res.cloudinary.com/dfamiaufc/image/upload/v1651870370/Hobby%20Box/plantBox_vlg6ha.png"
     ],
@@ -72,7 +72,7 @@
     "price": [
       "24.99"
     ],
-    "description": "Mystery book box offers literature pieces from writers such as Edgar Allan Poe, James Baldwin, Ernest Hemingway, Friederich Nietzsche and many more."
+    "description": "Mystery books box offers literature pieces from writers such as Edgar Allan Poe, James Baldwin, Ernest Hemingway, Friederich Nietzsche and many more.",
     "images": [
       "https://res.cloudinary.com/dfamiaufc/image/upload/v1651018515/Portfolio/self-pic_lyx150.jpg"
     ],
