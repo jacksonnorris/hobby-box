@@ -11,7 +11,11 @@ const orderSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'Box'
       }
-    ]
+    ],
+    orderConfrimation: {
+      type: String,
+      default: Date.now
+    },
     // name: {
     //   type: String,
     //   required: true,
