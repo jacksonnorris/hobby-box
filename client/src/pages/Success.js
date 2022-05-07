@@ -29,11 +29,20 @@ function Success() {
   if (currentOrder) {
     return (
       <div>
-        <section>
+        <div>
           <h1>Success!</h1>
           <h2>Thank you for your purchase!</h2>
-          <h2>You will now be redirected to the home page</h2>
-          <p>{new Date(+currentOrder.purchaseDate).toDateString()}</p>
+        </div>
+        <section>
+          <h3>Order Details</h3>
+          <p>Confirmation number: {currentOrder._id}</p>
+          <p>Order placed: {new Date(+currentOrder.purchaseDate).toDateString()}</p>
+          <p>Expected Delivery set for:  {new Date((+currentOrder.purchaseDate) + 604800).toDateString()}</p>
+          <div>
+            {currentOrder.products.map((product) => {
+              return (<p>{product._id}</p>)
+            })}
+          </div>
         </section>
       </div>
     );

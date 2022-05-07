@@ -29,8 +29,11 @@ const Home = () => {
 
   return (
     <main>
+      <div class='heroImage'><img src='https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp' alt='banner' /></div>
       <div className="flex-row justify-center">
-        <h2>Hello, {renderUsername()}! Welcome to HobbyBox!</h2>
+    
+        <h2>Hello, {renderUsername()}!</h2> <h2>Welcome to HobbyBox!</h2>
+
         <Cart />
       </div>
       <h2>Check out our amazing products!</h2>

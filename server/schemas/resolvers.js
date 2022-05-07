@@ -120,12 +120,11 @@ const resolvers = {
       throw new AuthenticationError('No user found.');
     },
     addOrder: async (parent, { products }, context) => {
-      console.log('addOrder called');
       if (context.user) {
         const order = new Order({ products });
 
-        const userOrder = await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
-        console.log('userOrder', userOrder);
+        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+
         return order;
       }
       throw new AuthenticationError('Something went wrong!');
