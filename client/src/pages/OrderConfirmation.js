@@ -5,7 +5,6 @@ const OrderConfirmation = () => {
   return (
     <main>
       <h4>Order Confirmation</h4>
-
     </main>
   );
 };
