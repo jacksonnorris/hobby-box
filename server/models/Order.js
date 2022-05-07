@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
 
 const orderSchema = new Schema(
   {
@@ -11,31 +12,11 @@ const orderSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'Box'
       }
-    ]
-    // name: {
-    //   type: String,
-    //   required: true,
-    //   unique: true,
-    //   trim: true
-    // },
-    // user: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'User'
-    // },
-    // price: {
-    //   type: Number,
-    //   required: true
-    // },
-    // box: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'Box',
-    //   required: true,
-    // },
-    // frequency: {
-    //   type: Number,
-    //   ref: 'Box',
-    //   required: true,
-    // },
+    ],
+    orderConfirmation: {
+      type: String,
+      default: uuidv4(),
+    },
   }
 );
 

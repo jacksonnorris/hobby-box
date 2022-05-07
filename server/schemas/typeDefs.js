@@ -20,6 +20,7 @@ const typeDefs = gql`
     _id: ID
     purchaseDate: String
     products: [Box]
+    orderConfirmation: String
   }
 
   input OrderInputs {
