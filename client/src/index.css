@@ -97,6 +97,12 @@ footer {
   justify-content: center;
 }
 
+.imageWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
 .infoWrapper {
   margin: 0 10px;
   white-space: pre-wrap;
@@ -111,7 +117,9 @@ footer {
 }
 
 @media (min-width: 1024px) {
-  .productContent img {
+
+  .imageWrapper {
+    min-width: 50%;
     max-width: 60%;
   }
 
@@ -147,4 +155,17 @@ input {
 
 .warning {
   color: #d36443;
+}
+
+.thumbImg {
+  max-width: 85px;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+.imageWrapper button {
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  padding: 0;
 }
