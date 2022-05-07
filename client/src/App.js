@@ -18,6 +18,7 @@ import AboutUs from './pages/AboutUs';
 import Categories from './pages/Categories';
 import Success from './pages/OrderConfirmation';
 import ProductPage from './pages/ProductPage';
+import TestProductPage from './pages/TestProductPage';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -61,6 +62,7 @@ function App() {
                 <Route path="/me" element={<Profile />} />
                 <Route path="/users/:id" element={<Profile />} />
                 <Route path='/products/:boxId' element={<ProductPage />} />
+                <Route path='/testproducts/:boxId' element={<TestProductPage />} />
                 <Route path="/aboutus" element={<AboutUs />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/success" element={<Success />} />
