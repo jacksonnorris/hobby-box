@@ -20,6 +20,9 @@ const ProductPage = () => {
   });
   const boxes = data?.boxes || [];
   const box = dataBox?.box;
+
+
+
   useEffect(() => {
     // already in global store
     if (boxes.length) {
@@ -69,7 +72,6 @@ const ProductPage = () => {
       idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
     }
   }
-
   if (loadingBox) {
     return <span>Loading</span>;
   }
@@ -79,7 +81,14 @@ const ProductPage = () => {
         <Cart />
         <h3>{box.name} Box</h3>
         <div className='productContent'>
-          <img src={box.images[0]} alt={box.name} />
+          <div className='imageWrapper'>
+            <img id='mainImage' className='mainImage' src={box.images[0]} alt={box.name} />
+            {box.images.map((img) => (
+              <button onClick={() => { document.getElementById('mainImage').setAttribute('src', img) }}>
+                <img className='thumbImg' src={img} alt={img} />
+              </button>
+            ))}
+          </div>
           <div className='infoWrapper'>
             <p>{box.description}</p>
             <p>This box is available for {box.price}</p>
@@ -90,5 +99,6 @@ const ProductPage = () => {
     </main>
   )
 }
+
 
 export default ProductPage;

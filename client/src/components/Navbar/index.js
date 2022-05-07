@@ -8,7 +8,7 @@ function Navbar() {
     event.preventDefault();
     Auth.logout();
   };
-  
+
   if (Auth.loggedIn()) {
     return (
       <>
@@ -29,6 +29,9 @@ function Navbar() {
       </Link>
       <Link to="/signup">
         Signup
+      </Link>
+      <Link to="/aboutUs">
+        About Us
       </Link>
     </>
   )
