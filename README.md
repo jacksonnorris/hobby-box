@@ -1,13 +1,16 @@
-# Apollo Mern Mongo
+# Mystery HOBBY BOX 
+## Description 
 
-Boilerplate code to setup a MERN Apollo Server/Client Application using a Mongo database
+As a group we made a decision to create web-application under the name Hobby-Box. Our goal is to provide online store for all those into a hobby and those looking to start one. Therefore, subscribes can subscribe to a service that will deliver hobby-related products to their home. 
 
-## Description
+Some of the products hobby enthusits can choose from include: Gardening, Beer/Wine, Keyboards, Arts & Craft, Dungeons & Dragons, & Books. 
+## Process 
 
-## License
-
-## Table of Contents
-
+'''server'''
+'''models'''
+'''schemas'''
+'''seeders'''
+'''utils'''
 ## Installaion
 
 npm start
@@ -17,12 +20,7 @@ Open http://localhost:3000 to view it in your browser.
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-## Usage
-
-## Demo 
-
-
-## Contributions
+## Credits
 
 Rocio Galvan
 https://github.com/Ro-Galvan
@@ -42,4 +40,7 @@ https://github.com/jacksonnorris
 Rachel LeBoeuf
 https://github.com/rachelleBoeuf
 
+## License 
+
+['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
 
