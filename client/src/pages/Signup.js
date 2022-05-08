@@ -65,72 +65,84 @@ const Signup = (props) => {
       )
     }
     return (
-      <form class='form' onSubmit={handleFormSubmit}>
-        <div className="form-item">
-          <input
-            placeholder="Your username"
-            name="username"
-            type="text"
-            value={formState.name}
-            onChange={handleChange}
-            onBlur={handleChange}
-          />
-          <p className='warning mt-2' hidden>Required</p>
-        </div>
-        <div className="form-item">
-          <input
-            placeholder="Your email"
-            name="email"
-            type="email"
-            value={formState.email}
-            onChange={handleChange}
-            onBlur={handleChange}
-          />
-          <p className='warning mt-2' hidden>Required</p>
-        </div>
-        <div className="form-item">
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            value={formState.password}
-            onChange={handleChange}
-            onBlur={handleChange}
-          />
-          <p className='warning mt-2' hidden>Required</p>
-        </div>
-        <div className="form-item">
-          <input
-            placeholder="Billing Address"
-            name="billingAddress"
-            type="text"
-            value={formState.billingAddress}
-            onChange={handleChange}
-            onBlur={handleChange}
-          />
-          <p className='warning mt-2' hidden>Required</p>
-        </div>
-        <div className="form-item">
-          <input
-            placeholder="Shipping Address"
-            name="shippingAddress"
-            type="text"
-            value={formState.shippingAddress}
-            onChange={handleChange}
-            onBlur={handleChange}
-          />
-          <p className='warning mt-2' hidden>Required</p>
-        </div>
-        <button type="submit">
-          Submit
-        </button>
-      </form >
+      <div className='container mx-auto px-4'>
+        <form class='form' onSubmit={handleFormSubmit}>
+          <div className="form-item">
+            <input className='signUpInput'
+              placeholder="Your username"
+              name="username"
+              type="text"
+              value={formState.name}
+              onChange={handleChange}
+              onBlur={handleChange}
+            />
+            <div className="form-warning">
+              <p className='warning mt-2' hidden>Required</p>
+            </div>
+          </div>
+          <div className="form-item">
+            <input className='signUpInput'
+              placeholder="Your email"
+              name="email"
+              type="email"
+              value={formState.email}
+              onChange={handleChange}
+              onBlur={handleChange}
+            />
+            <div className="form-warning">
+              <p className='warning mt-2' hidden>Required</p>
+            </div>
+          </div>
+          <div className="form-item">
+            <input className='signUpInput'
+              placeholder="******"
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleChange}
+              onBlur={handleChange}
+            />
+            <div className="form-warning">
+              <p className='warning mt-2' hidden>Required</p>
+            </div>
+          </div>
+          <div className="form-item">
+            <input className='signUpInput'
+              placeholder="Billing Address"
+              name="billingAddress"
+              type="text"
+              value={formState.billingAddress}
+              onChange={handleChange}
+              onBlur={handleChange}
+            />
+            <div className="form-warning">
+              <p className='warning mt-2' hidden>Required</p>
+            </div>
+          </div>
+          <div className="form-item">
+            <input className='signUpInput'
+              placeholder="Shipping Address"
+              name="shippingAddress"
+              type="text"
+              value={formState.shippingAddress}
+              onChange={handleChange}
+              onBlur={handleChange}
+            />
+            <div className="form-warning">
+              <p className='warning mt-2' hidden>Required</p>
+            </div>
+          </div>
+          <button type="submit" className='signUpButton'>
+            Submit
+          </button>
+        </form >
+      </div>
     );
   };
 
   return (
     <main>
-      <h4>Sign Up</h4>
+      <h2 className='signUpTitle'>Sign Up</h2>
       <div>
         {renderForm()}
         {error && <div>{error.message}</div>}
