@@ -228,3 +228,27 @@ input {
   margin-top: 1rem;
 }
 
+.product-header {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 1rem;
+  background-color: #81b29a;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.order-details {
+  margin: 1rem 0 3rem 2rem;
+}
+
+.detail {
+  margin-bottom: 1rem;
+  font-size: 17px;;
+}
+
+.thanks {
+  font-weight: 300;
+  margin: 2rem;
+}
+
