@@ -44,7 +44,7 @@
     "price": [
       "24.99"
     ],
-    "description": "Arts and Crafts box! Mystery box is filled with traditioanl and modern arts and crafts. If you are into knitting, painting, journaling this mystery box is for you!",
+    "description": "Arts and Crafts box! Mystery box is filled with traditional and modern arts and crafts. If you are into knitting, painting and Pintrest pins this mystery box is for you! Save time from buying individual parts, this box comes with the DIY kits ready to go! ",
     "images": [
       "https://res.cloudinary.com/dfamiaufc/image/upload/v1651960524/Hobby%20Box/artBox_bf19j2.png",
       "https://res.cloudinary.com/dlggorsro/image/upload/c_scale,h_820,w_900/v1651960443/hobby-box/artsAndCraftsSecondary_kui3lh.jpg",
@@ -61,9 +61,9 @@
   {
     "name": "Gardening",
     "price": [
-      "80.99"
+      "24.99"
     ],
-    "description": "Gardening mystery box! If you are indoor or outdoor plant lover, we have the right plants for you. Our mystery box includes plants for all your garden needs.",
+    "description": "Gardening mystery box! If you are indoor or outdoor plant lover, we have the right plants for you. Our mystery box includes plants, seeds and tools for all your garden needs.",
     "images": [
       "https://res.cloudinary.com/dfamiaufc/image/upload/v1651870370/Hobby%20Box/plantBox_vlg6ha.png",
       "https://res.cloudinary.com/dlggorsro/image/upload/v1652030463/hobby-box/20200730113308_file_5f2358b43e8b9_5f2359b63ec5d_haiodx.webp",
@@ -103,7 +103,7 @@
     "price": [
       "39.99"
     ],
-    "description": "Mystery beer/wine box offers full selection of beer and wine from local breweries and from abroad. You can reward yourself or your family with fine wine from places such as Italy and France or craft beer from Southern Appalachians. If beer and wine is not your 'hobby' then why not make it one? We offer best prices that anyone can afford! Please, choose from any of our prices.",
+    "description": "Mystery beer/wine box offers full selection of beer and wine from local breweries and from abroad. You can reward yourself or your family with fine wine from places such as Italy and France or craft beer from Southern Appalachians. If beer and wine is not your 'hobby' then why not make it one? We offer best prices that anyone can afford!",
     "images": [
       "https://res.cloudinary.com/dfamiaufc/image/upload/v1651960534/Hobby%20Box/wineBox_ojqel1.png",
       "https://res.cloudinary.com/dlggorsro/image/upload/v1652030926/hobby-box/download_4_odst3s.jpg",
