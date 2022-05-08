@@ -65,7 +65,23 @@ const Signup = (props) => {
       )
     }
     return (
-      <div className='container mx-auto px-4'>
+      <div className='my-5
+      form-control
+      block
+      w-6/12
+      px-3
+      py-3
+      text-base
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+    "'>
         <form class='form' onSubmit={handleFormSubmit}>
           <div className="form-item">
             <input className='signUpInput'
@@ -132,9 +148,11 @@ const Signup = (props) => {
               <p className='warning mt-2' hidden>Required</p>
             </div>
           </div>
-          <button type="submit" className='signUpButton'>
-            Submit
-          </button>
+          <div className='signUpButton'>
+            <button type="submit" >
+              Submit
+            </button>
+          </div>
         </form >
       </div>
     );
@@ -143,7 +161,7 @@ const Signup = (props) => {
   return (
     <main>
       <h2 className='signUpTitle'>Sign Up</h2>
-      <div>
+      <div className='signUpForm'>
         {renderForm()}
         {error && <div>{error.message}</div>}
       </div>
