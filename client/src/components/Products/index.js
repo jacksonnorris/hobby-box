@@ -9,13 +9,10 @@ import { idbPromise } from '../../utils/helpers';
 const Products = ({ products }) => {
   const [state, dispatch] = useStoreContext();
 
-  // const { currentCategory } = state;
-  
   const { loading, data } = useQuery(QUERY_BOXES);
   const boxes = data?.boxes || [];
   useEffect(() => {
     if (boxes.length) {
-      console.log(boxes);
       dispatch({
         type: UPDATE_PRODUCTS,
         products: boxes,
@@ -33,7 +30,6 @@ const Products = ({ products }) => {
     }
   }, [boxes, loading, dispatch]);
 
-  console.log(products)
   if (!products) return null
   if (!products.length) return <h3>No products</h3>
   return products.map(product => <ProductItem key={product._id} {...product} />);

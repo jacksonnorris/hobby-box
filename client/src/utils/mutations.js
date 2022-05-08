@@ -34,13 +34,13 @@ export const LOGIN_USER = gql`
 
 // Update User
 export const UPDATE_USER = gql`
-  mutation updateUser($_id: ID!, $address: String, $shipping: String, $orders: [OrderInputs]) {
+  mutation updateUser($_id: ID!, $billingAddress: String, $shippingAddress: String, $orders: [OrderInputs]) {
     updateUser(_id: $id) {
       user {
         _id
         username
-        address
-        shipping
+        billingAddress
+        shippingAddress
         orders
       }
     }

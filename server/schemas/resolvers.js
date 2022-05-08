@@ -20,7 +20,6 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-
     orders: async () => {
       return Order.find();
     },

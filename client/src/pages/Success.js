@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_USERNAME } from '../utils/queries';
 import { ADD_ORDER } from '../utils/mutations';
 import { idbPromise } from '../utils/helpers';
@@ -10,9 +10,15 @@ function Success() {
     if (!Auth.loggedIn()) return null;
     return Auth.getProfile().data.username;
   }
+  const currentUser = renderUsername();
+  console.log('currentUser', currentUser);
+
   const { loading, data } = useQuery(QUERY_USERNAME, {
-    variables: { username: data.username },
+    variables: { username: currentUser },
   });
+
+  console.log('return from username query', data);
+
   const [currentOrder, setCurrentOrder] = useState(null);
   const [addOrder] = useMutation(ADD_ORDER);
 
@@ -44,8 +50,8 @@ function Success() {
         <section>
           <h3>Order Details</h3>
           <p>User: {renderUsername()}</p>
-          <p>Billing Adress: {renderBilling()}</p>
-          <p>Shipping Address: {renderShipping()}</p>
+          <p>Billing Adress: </p>
+          <p>Shipping Address: </p>
           <p>Confirmation number: {currentOrder._id}</p>
           <p>Order placed: {new Date(+currentOrder.purchaseDate).toDateString()}</p>
           <p>Expected Delivery set for:  {new Date((+currentOrder.purchaseDate + 604800)).toDateString()}</p>
@@ -57,6 +63,8 @@ function Success() {
         </section>
       </div>
     );
+  } else if (loading) {
+    return null;
   } else {
     return null;
   }

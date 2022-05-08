@@ -17,7 +17,7 @@ const Home = () => {
 
   const { loading: boxesLoading, data: boxesData } = useQuery(QUERY_BOXES);
   const boxes = boxesData?.boxes || [];
-  console.log(boxes);
+
 
   const renderProducts = () => {
     if (boxesLoading) {
@@ -31,7 +31,7 @@ const Home = () => {
     <main>
       <div class='heroImage'><img src='https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp' alt='banner' /></div>
       <div className="flex-row justify-center">
-    
+
         <h2>Hello, {renderUsername()}!</h2> <h2>Welcome to HobbyBox!</h2>
 
         <Cart />
