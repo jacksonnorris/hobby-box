@@ -6,8 +6,8 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    address: String
-    shipping: String
+    billingAddress: String
+    shippingAddress: String
     orders: [Order]
   }
 
@@ -27,6 +27,7 @@ const typeDefs = gql`
     _id: ID
     purchaseDate: String
     products: [BoxInputs]
+    orderConfirmation: String
   }
 
   input UserInputs {
@@ -34,8 +35,8 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    address: String
-    shipping: String
+    billingAddress: String
+    shippingAddress: String
     orders: [OrderInputs]
   }
 
@@ -79,7 +80,7 @@ const typeDefs = gql`
     users: [User]
     user(id: ID!): User
     me: User
-    orders: [Order]!
+    orders: [Order]
     boxes: [Box]!
     box(id: ID!): Box
     checkout(products: [ID]!): Checkout

@@ -6,5 +6,21 @@
     "billingAddress": "101 Southway Garden Road, Arden, NC 28704",
     "shippingAddress": "101 Southway Garden Road, Arden, NC 28704",
     "orders": []
+  },
+  {
+    "username": "Susie",
+    "email": "susie@gmail.com",
+    "password": "password1234",
+    "billingAddress": "59 Sunshine Road, Charlotte, NC 27862",
+    "shippingAddress": "59 Sunshine Road, Charlotte, NC 27862",
+    "orders": []
+  },
+  {
+    "username": "Jimmy",
+    "email": "Jimmy@yahoo.com",
+    "password": "password1234",
+    "billingAddress": "123 Main Street, Raleigh, NC 27529",
+    "shippingAddress": "123 Main Street, Raleigh, NC 27529",
+    "orders": []
   }
 ]
