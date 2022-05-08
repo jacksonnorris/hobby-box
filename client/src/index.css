@@ -48,6 +48,21 @@ header>div {
 .heroImage {
   height: 200px;
   overflow: hidden;
+  background: url(https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp) center center no-repeat;
+  background-attachment: fixed;
+}
+.aboutUsHeroImage {
+  height: 200px;
+  overflow: hidden;
+  background: url(https://res.cloudinary.com/dfamiaufc/image/upload/v1652046542/Hobby%20Box/pexels-cottonbro-4553180_fwkhsd.jpg) center center no-repeat;
+  background-attachment: fixed;
+}
+
+.heroImage-profile {
+  height: 200px;
+  overflow: hidden;
+  background: url(https://res.cloudinary.com/dfamiaufc/image/upload/c_scale,w_2100/v1652044758/Hobby%20Box/pexels-cottonbro-4553183_fg4alp.jpg) 50% 0% no-repeat;
+  background-attachment: fixed;
 }
 
 h3,
@@ -62,7 +77,11 @@ footer {
   flex-wrap: wrap;
   bottom: 0;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  background-color: #264653;
+  color: white;
+  height: 4rem;
 }
 
 .footerWrapper {
@@ -84,6 +103,7 @@ footer {
   padding: 20px;
   text-align: center;
   max-width: 400px;
+  margin: 2rem;
 }
 
 .card:hover {
@@ -126,11 +146,15 @@ footer {
 
   .imageWrapper {
     min-width: 50%;
-    max-width: 60%;
+    max-width: 55%;
+  }
+
+  .imageWrapper img {
+    max-height: 700px;
   }
 
   .infoWrapper {
-    max-width: 30%;
+    max-width: 40%;
   }
 }
 
@@ -145,7 +169,6 @@ button {
 .form {
   display: flex;
   flex-direction: column;
-  width: 80%;
   margin-left: 2rem;
 }
 
@@ -160,7 +183,14 @@ input {
 }
 
 .warning {
+  display: flex;
+  align-items: center;
   color: #d36443;
+  padding-left: 15px;
+}
+
+.thumbImgWrapper {
+  width: -webkit-fill-available;
 }
 
 .thumbImg {
@@ -178,4 +208,111 @@ input {
 
 .trash-button {
   padding-right: 10px;
+}
+
+.trash-button:hover {
+  cursor: pointer;
+}
+
+.cart-item {
+  padding: 1rem 0 1rem 2rem;
+}
+
+.total {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.checkout-btn {
+  margin: 1rem;
+}
+
+.welcome {
+  margin: 2rem;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.home-header {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.box-title {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.product-header {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 1rem;
+  background-color: #81b29a;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.order-details {
+  margin: 1rem 0 3rem 2rem;
+}
+
+.detail {
+  margin-bottom: 1rem;
+  font-size: 17px;;
+}
+
+.thanks {
+  font-weight: 300;
+  margin: 2rem;
+}
+
+.form.form{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-item {
+  display: flex;
+  justify-content: center;
+   align-items: center;
+  width: 80%
+  
+}
+
+.signUpTitle {
+  margin: 20px;
+}
+
+.signUpButton {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width:  70%;
+} 
+
+ .signUpInput{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width:  70%;
+}
+
+.signUpForm {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.nav-button {
+  border: none;
+  font-size: 18px;
+  color: #81b29a;
+}
+
+.profile {
+  margin-top: 3rem;
 }
