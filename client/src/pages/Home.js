@@ -27,6 +27,8 @@ const Home = () => {
     }
   }
 
+
+
   return (
     <main>
       <div class='heroImage'></div>
