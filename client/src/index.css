@@ -62,7 +62,11 @@ footer {
   flex-wrap: wrap;
   bottom: 0;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  background-color: #264653;
+  color: white;
+  height: 4rem;
 }
 
 .footerWrapper {
@@ -84,6 +88,7 @@ footer {
   padding: 20px;
   text-align: center;
   max-width: 400px;
+  margin: 2rem;
 }
 
 .card:hover {
@@ -198,4 +203,21 @@ input {
 
 .checkout-btn {
   margin: 1rem;
+}
+
+.welcome {
+  margin: 2rem;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.home-header {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.box-title {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 1rem;
 }
