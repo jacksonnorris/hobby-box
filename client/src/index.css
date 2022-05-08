@@ -179,3 +179,15 @@ input {
 .trash-button {
   padding-right: 10px;
 }
+
+.cart-item {
+  padding: 1rem 0 1rem 2rem;
+}
+
+.total {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.checkout-btn {
+  margin: 1rem;
+}
