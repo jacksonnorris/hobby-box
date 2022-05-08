@@ -172,6 +172,12 @@ button {
   margin-left: 2rem;
 }
 
+.form-login {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
 input {
   margin-top: 1rem;
 }
@@ -316,6 +322,7 @@ input {
   display: flex;
   justify-content: center;
   align-self: center;
+  flex-direction: column;
 }
 
 .loginSubmitButton {
@@ -341,6 +348,7 @@ input {
 .SandLBackground{
   background-image: url("https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp");
   background-size: cover;
+  margin: 0px;
 }
 
 .marginSetter {
