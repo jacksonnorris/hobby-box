@@ -254,7 +254,6 @@ input {
   margin: 2rem;
 }
 
-
 .form.form{
   margin: 10px;
   display: flex;
@@ -293,4 +292,10 @@ input {
   display: flex;
   justify-content: center;
   align-self: center;
+}
+
+.nav-button {
+  border: none;
+  font-size: 18px;
+  color: #81b29a;
 }
