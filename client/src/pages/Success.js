@@ -10,7 +10,7 @@ function Success() {
     if (!Auth.loggedIn()) return null;
     return Auth.getProfile().data.username;
   }
-  const currentUser = renderUsername();
+  const currentUser = (renderUsername()).toString();
   console.log('currentUser', currentUser);
 
   const { loading, data } = useQuery(QUERY_USERNAME, {
