@@ -47,8 +47,8 @@ function Success() {
           <h1>Success!</h1>
           <h2>Thank you for your purchase!</h2>
         </div>
-        <section>
-          <h3>Order Details</h3>
+        <section className='container mx-auto px-4'>
+          <h4>Order Details</h4>
           <p>User: {renderUsername()}</p>
           <p>Billing Adress: </p>
           <p>Shipping Address: </p>
