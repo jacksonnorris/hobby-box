@@ -65,7 +65,7 @@ const Signup = (props) => {
       )
     }
     return (
-      <div className='my-5
+      <div className='my-12
       form-control
       block
       w-6/12
@@ -93,7 +93,7 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-            <div className="form-warning">
+            <div className="form-warning" hidden='hidden'>
               <p className='warning mt-2' hidden>Required</p>
             </div>
           </div>
@@ -106,7 +106,7 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-            <div className="form-warning">
+            <div className="form-warning" hidden='hidden'>
               <p className='warning mt-2' hidden>Required</p>
             </div>
           </div>
@@ -119,7 +119,7 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-            <div className="form-warning">
+            <div className="form-warning" hidden='hidden'>
               <p className='warning mt-2' hidden>Required</p>
             </div>
           </div>
@@ -132,7 +132,7 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-            <div className="form-warning">
+            <div className="form-warning" hidden='hidden'>
               <p className='warning mt-2' hidden>Required</p>
             </div>
           </div>
@@ -145,7 +145,7 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-            <div className="form-warning">
+            <div className="form-warning" hidden='hidden'>
               <p className='warning mt-2' hidden>Required</p>
             </div>
           </div>
@@ -164,12 +164,12 @@ const Signup = (props) => {
 
   return (
     <main className='SandLBackground'>
-      <div clasName= 'marginSetter'>
-      
-      <div className='signUpForm'>
-        {renderForm()}
-        {error && <div>{error.message}</div>}
-      </div>
+      <div clasName='marginSetter'>
+
+        <div className='signUpForm'>
+          {renderForm()}
+          {error && <div>{error.message}</div>}
+        </div>
       </div>
     </main>
   );
