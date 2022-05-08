@@ -23,19 +23,6 @@ const resolvers = {
     orders: async () => {
       return Order.find();
     },
-    // THIS MAY BE A DISASTER
-    // orders: async (parent, { _id }, context) => {
-    //   if (context.user) {
-    //     const user = await User.findById(context.user._id).populate({
-    //       path: 'orders.products',
-    //       // HERES THE DISASTER
-    //       // populate: 'box'
-    //     });
-
-    //     return user.orders.id(_id);
-    //   }
-    //   throw new AuthenticationError('No order found!');
-    // },
     boxes: async (parent, args) => {
       return Box.find();
     },
@@ -60,7 +47,7 @@ const resolvers = {
         const product = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
-          images: [`${products[i].images}`]
+          images: [`${products[i].images[0]}`]
         });
         // This portion of the loop uses product's price property to create price association to single line items
         const price = await stripe.prices.create({
