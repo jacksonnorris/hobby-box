@@ -361,3 +361,7 @@ input {
 .profile {
   margin-top: 3rem;
 }
+#aboutUsHeader {
+  background-color: #81b29a;
+  color: black;
+}
