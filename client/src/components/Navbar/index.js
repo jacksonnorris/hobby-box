@@ -27,13 +27,13 @@ function Navbar() {
   // If logged out show login controls
   return (
     <>
-      <Link to="/aboutUs">
+      <Link to="/aboutUs" className='nav-button'>
         About Us
       </Link>
-      <Link to="/login">
+      <Link to="/login" className='nav-button'>
         Login
       </Link>
-      <Link to="/signup">
+      <Link to="/signup" className='nav-button'>
         Signup
       </Link>
     </>
