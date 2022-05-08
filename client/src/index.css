@@ -48,6 +48,8 @@ header>div {
 .heroImage {
   height: 200px;
   overflow: hidden;
+  background: url(https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp) center center no-repeat;
+  background-attachment: fixed;
 }
 
 h3,
@@ -193,6 +195,10 @@ input {
   padding-right: 10px;
 }
 
+.trash-button:hover {
+  cursor: pointer;
+}
+
 .cart-item {
   padding: 1rem 0 1rem 2rem;
 }
@@ -221,3 +227,4 @@ input {
   font-weight: 300;
   margin-top: 1rem;
 }
+

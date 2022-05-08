@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <main>
-      <div class='heroImage'><img src='https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp' alt='banner' /></div>
+      <div class='heroImage'></div>
       <div className="flex-row justify-center">
         <h2 className='welcome'>{renderUsername()}</h2>
         <Cart />
