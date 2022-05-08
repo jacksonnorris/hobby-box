@@ -278,7 +278,6 @@ input {
   display: flex;
   justify-content: center;
   align-self: center;
-  width:  70%;
 } 
 
  .signUpInput{
@@ -298,4 +297,43 @@ input {
   border: none;
   font-size: 18px;
   color: #81b29a;
+}
+
+.loginFormInputs{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.loginSubmitButton {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+} 
+
+.loginForm{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.loginFormErr{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  
+}
+
+.SandLBackground{
+  background-image: url("https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp");
+  background-size: cover;
+}
+
+.marginSetter {
+  margin: 0px;
+}
+
+.loginTitle {
+  padding: 20px;
 }
