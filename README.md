@@ -64,7 +64,7 @@ https://github.com/rachelleBoeuf
 
 ## Support 
 
-gurudarji@ymail.com
+gurudarji@gmail.com
 devonfaria@gmail.com
 edinhurem@gmail.com
 jacknorris@gmail.com
