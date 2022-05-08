@@ -10,8 +10,8 @@ export const QUERY_USERS = gql`
     username
     email
     password
-    address
-    shipping
+    billingAddress
+    shippingAddress
     }
   }
 `;
@@ -40,21 +40,20 @@ export const QUERY_ME = gql`
 // // get Orders
 
 export const QUERY_ORDERS = gql`
-  query Orders {
+  query orders {
     orders {
       _id
+      purchaseDate
+      orderConfirmation
+      products {
+      _id
+      name
       price
-      frequency
-      user {
-        _id
-        address
-        shipping
+      description
+    }
       }
     }
-  }
 `;
-
-
 
 
 // query Boxes {
