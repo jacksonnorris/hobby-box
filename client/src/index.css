@@ -252,3 +252,9 @@ input {
   margin: 2rem;
 }
 
+.nav-button {
+  border: none;
+  font-size: 18px;
+  color: #81b29a;
+}
+
