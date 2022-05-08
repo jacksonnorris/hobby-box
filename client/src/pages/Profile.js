@@ -58,7 +58,8 @@ const Profile = () => {
 
   return (
     <main>
-      <section className='container mx-auto px-4'>
+      <div className='heroImage-profile'></div>
+      <section className='container mx-auto px-4 profile'>
         <div>
           <h4 className='product-header'>Your Personal Information</h4>
           {renderCurrentUserInfo()}
