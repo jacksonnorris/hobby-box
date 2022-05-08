@@ -51,6 +51,12 @@ header>div {
   background: url(https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp) center center no-repeat;
   background-attachment: fixed;
 }
+.aboutUsHeroImage {
+  height: 200px;
+  overflow: hidden;
+  background: url(https://res.cloudinary.com/dfamiaufc/image/upload/v1652046542/Hobby%20Box/pexels-cottonbro-4553180_fwkhsd.jpg) center center no-repeat;
+  background-attachment: fixed;
+}
 
 h3,
 h2 {
