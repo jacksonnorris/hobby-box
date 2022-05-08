@@ -65,15 +65,15 @@
 
 @media screen and (max-width: 768px) {
   .cart {
-    position: relative;
+    position: fixed;
     max-width: 100%;
     max-height: auto;
     box-shadow: none;
-    background-color: inherit;
+    background-color: white;
   }
 
   .cart-closed {
-    position: relative;
+    position: fixed;
     margin: 0 auto;
   }
 }
