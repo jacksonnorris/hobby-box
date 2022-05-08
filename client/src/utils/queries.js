@@ -27,16 +27,15 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_USERNAME = gql`
-  query username($username: String!) {
-    user(username: $username) {
-      _id
-      username
-      email
-      billingAddress
-      shippingAddress
-      orders
-    }
+  query username($username: String) {
+  username(username: $username) {
+    _id
+    username
+    email
+    billingAddress
+    shippingAddress
   }
+}
 `;
 
 //  query from Anthony that was here already--might not need it:

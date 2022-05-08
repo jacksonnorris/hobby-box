@@ -12,7 +12,7 @@ import { QUERY_BOXES } from '../utils/queries';
 const ProductPage = () => {
   const { boxId } = useParams();
   const [state, dispatch] = useStoreContext();
-  const { cart, products } = state;
+  const { cart } = state;
   const [currentProduct, setCurrentProduct] = useState({});
   const { loading, data } = useQuery(QUERY_BOXES);
   const { loading: loadingBox, data: dataBox } = useQuery(QUERY_BOX, {
@@ -20,8 +20,6 @@ const ProductPage = () => {
   });
   const boxes = data?.boxes || [];
   const box = dataBox?.box;
-
-
 
   useEffect(() => {
     // already in global store
