@@ -52,6 +52,13 @@ header>div {
   background-attachment: fixed;
 }
 
+.heroImage-profile {
+  height: 200px;
+  overflow: hidden;
+  background: url(https://res.cloudinary.com/dfamiaufc/image/upload/c_scale,w_2100/v1652044758/Hobby%20Box/pexels-cottonbro-4553183_fg4alp.jpg) 50% 0% no-repeat;
+  background-attachment: fixed;
+}
+
 h3,
 h2 {
   font-weight: bold;
@@ -298,4 +305,8 @@ input {
   border: none;
   font-size: 18px;
   color: #81b29a;
+}
+
+.profile {
+  margin-top: 3rem;
 }
