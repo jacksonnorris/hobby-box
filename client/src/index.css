@@ -126,11 +126,15 @@ footer {
 
   .imageWrapper {
     min-width: 50%;
-    max-width: 60%;
+    max-width: 55%;
+  }
+
+  .imageWrapper img {
+    max-height: 700px;
   }
 
   .infoWrapper {
-    max-width: 30%;
+    max-width: 40%;
   }
 }
 
@@ -161,6 +165,10 @@ input {
 
 .warning {
   color: #d36443;
+}
+
+.thumbImgWrapper {
+  width: -webkit-fill-available;
 }
 
 .thumbImg {

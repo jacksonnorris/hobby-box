@@ -81,11 +81,13 @@ const ProductPage = () => {
         <div className='productContent'>
           <div className='imageWrapper'>
             <img id='mainImage' className='mainImage' src={box.images[0]} alt={box.name} />
-            {box.images.map((img) => (
-              <button onClick={() => { document.getElementById('mainImage').setAttribute('src', img) }}>
-                <img className='thumbImg' src={img} alt={img} />
-              </button>
-            ))}
+            <div class='thumbImgWrapper'>
+              {box.images.map((img) => (
+                <button onClick={() => { document.getElementById('mainImage').setAttribute('src', img) }}>
+                  <img className='thumbImg' src={img} alt={img} />
+                </button>
+              ))}
+            </div>
           </div>
           <div className='infoWrapper'>
             <p>{box.description}</p>
