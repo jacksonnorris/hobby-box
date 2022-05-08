@@ -156,7 +156,6 @@ button {
 .form {
   display: flex;
   flex-direction: column;
-  width: 80%;
   margin-left: 2rem;
 }
 
@@ -171,7 +170,10 @@ input {
 }
 
 .warning {
+  display: flex;
+  align-items: center;
   color: #d36443;
+  padding-left: 15px;
 }
 
 .thumbImgWrapper {
@@ -252,9 +254,48 @@ input {
   margin: 2rem;
 }
 
+.form.form{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-item {
+  display: flex;
+  justify-content: center;
+   align-items: center;
+  width: 80%
+  
+}
+
+.signUpTitle {
+  margin: 20px;
+}
+
+.signUpButton {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width:  70%;
+} 
+
+ .signUpInput{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width:  70%;
+}
+
+.signUpForm {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
 .nav-button {
   border: none;
   font-size: 18px;
   color: #81b29a;
 }
-
