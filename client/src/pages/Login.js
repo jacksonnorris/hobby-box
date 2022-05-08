@@ -68,13 +68,13 @@ const Login = () => {
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       "
-          placeholder="Your email"
+          placeholder="Email"
           name="email"
           type="email"
           value={formState.email}
           onChange={handleChange}
         />
-        <input input className="
+        <input className="
         my-5
         form-control
         block
