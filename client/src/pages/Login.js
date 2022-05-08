@@ -47,26 +47,60 @@ const Login = () => {
           <Link to="/">back to the homepage.</Link>
         </p>
       )
-    } 
+    }
     return (
       <form onSubmit={handleFormSubmit}>
-        <input
+        <input className="
+        my-5
+        form-control
+        block
+        w-80
+        px-3
+        py-3
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
           placeholder="Your email"
           name="email"
           type="email"
           value={formState.email}
           onChange={handleChange}
         />
-        <input
-          placeholder="******"
+        <input input className="
+        my-5
+        form-control
+        block
+        w-80
+        px-3
+        py-3
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+          placeholder="Password"
           name="password"
           type="password"
           value={formState.password}
           onChange={handleChange}
         />
-        <button 
-         className = 'btn btn'
-        type="submit">
+        <button
+          className='btn btn'
+          type="submit">
           Submit
         </button>
       </form>
@@ -75,10 +109,12 @@ const Login = () => {
 
   return (
     <main>
-      <h4>Login</h4>
-      <div>
-        {renderForm()}
-        {error && <div>{error.message}</div>}
+      <div className='container mx-auto px-4 my-8'>
+        <span className="text-xl">Login</span>
+        <div>
+          {renderForm()}
+          {error && <div>{error.message}</div>}
+        </div>
       </div>
     </main>
   );
