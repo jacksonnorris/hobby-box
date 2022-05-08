@@ -1,9 +1,9 @@
 import React from 'react';
-import './AboutUs.css';
 
 
 const AboutUs = () => {
   return (
+    <main>
     <div id="accordion-collapse" data-accordion="collapse">
       <div className='container mx-auto px-4 my-8'>
         {/* Question 1 */}
@@ -70,13 +70,13 @@ const AboutUs = () => {
         </div>
         {/* Question 5 */}
         <h2 id="accordion-collapse-heading-5">
-          <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-5" aria-expanded="true" aria-controls="accordion-collapse-body-5">
+          <button type="button" className="flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
             <span className='text-xl'>I have an issue, who can I contact?</span>
             <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
           </button>
         </h2>
-        <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
-          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <div id="accordion-collapse-body-5" className="hidden" aria-labelledby="accordion-collapse-heading-5">
+          <div className="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
             <p className="mb-2 text-gray-500 dark:text-gray-400">
               You can call our customer service number 1-800-462-2929 everyday between 8am EST - 8pm EST. One of our customer service reps can assist you with any issues or questions you may have.
             </p>
@@ -87,6 +87,7 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
+    </main>
   )
 };
 
