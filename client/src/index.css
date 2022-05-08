@@ -51,6 +51,19 @@ header>div {
   background: url(https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp) center center no-repeat;
   background-attachment: fixed;
 }
+.aboutUsHeroImage {
+  height: 200px;
+  overflow: hidden;
+  background: url(https://res.cloudinary.com/dfamiaufc/image/upload/v1652046542/Hobby%20Box/pexels-cottonbro-4553180_fwkhsd.jpg) center center no-repeat;
+  background-attachment: fixed;
+}
+
+.heroImage-profile {
+  height: 200px;
+  overflow: hidden;
+  background: url(https://res.cloudinary.com/dfamiaufc/image/upload/c_scale,w_2100/v1652044758/Hobby%20Box/pexels-cottonbro-4553183_fg4alp.jpg) 50% 0% no-repeat;
+  background-attachment: fixed;
+}
 
 h3,
 h2 {
@@ -336,4 +349,7 @@ input {
 
 .loginTitle {
   padding: 20px;
+}
+.profile {
+  margin-top: 3rem;
 }
