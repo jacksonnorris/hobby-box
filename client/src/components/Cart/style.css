@@ -6,10 +6,10 @@
   max-width: 30%;
   max-height: 60%;
   background-color: rgba(255, 255, 255, 1);
-  overflow: auto;
+  overflow: unset;
   padding: .5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
-  border-bottom-left-radius: .5rem;
+  border-radius: 1rem;
 }
 
 .cart h2 {
