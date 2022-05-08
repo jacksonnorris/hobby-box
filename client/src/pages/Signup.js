@@ -6,6 +6,7 @@ import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
+
 const Signup = (props) => {
   const [formState, setFormState] = useState({
     username: '',
@@ -66,6 +67,7 @@ const Signup = (props) => {
     }
     return (
       <form class='form' onSubmit={handleFormSubmit}>
+        
         <div className="form-item">
           <input
             placeholder="Your username"
@@ -139,4 +141,7 @@ const Signup = (props) => {
   );
 };
 
+
+
 export default Signup;
+
