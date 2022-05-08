@@ -4,6 +4,12 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <main>
+      <div className='aboutUsHeroImage'></div>
+      <div className="flex-row justify-center">
+      <div className='welcome'>
+        <h2 className='home-header'> We are an open book. Take a look below for frequently asked questions.</h2>
+      </div>
+      </div>
     <div id="accordion-collapse" data-accordion="collapse">
       <div className='container mx-auto px-4 my-8'>
         {/* Question 1 */}
