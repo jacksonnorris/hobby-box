@@ -11,6 +11,9 @@ const resolvers = {
     user: async (parent, args) => {
       return User.findOne({ _id: args.id });
     },
+    username: async (parent, args) => {
+      return User.findOne({ username: args.username });
+    },
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
