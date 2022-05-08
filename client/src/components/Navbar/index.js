@@ -12,29 +12,29 @@ function Navbar() {
   if (Auth.loggedIn()) {
     return (
       <>
-        <Link to="/me">
-          {Auth.getProfile().data.username}'s profile
-        </Link>
-        <button onClick={logout}>
-          Logout
-        </button>
-        <Link to="/aboutUs">
+        <Link to="/aboutUs" className='nav-button'>
           About Us
         </Link>
+        <Link to="/me" className='nav-button'>
+          {Auth.getProfile().data.username}'s Profile
+        </Link>
+        <button className='nav-button' onClick={logout}>
+          Logout
+        </button>
       </>
     );
   }
   // If logged out show login controls
   return (
     <>
+      <Link to="/aboutUs">
+        About Us
+      </Link>
       <Link to="/login">
         Login
       </Link>
       <Link to="/signup">
         Signup
-      </Link>
-      <Link to="/aboutUs">
-        About Us
       </Link>
     </>
   )
