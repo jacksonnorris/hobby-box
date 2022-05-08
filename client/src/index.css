@@ -186,7 +186,6 @@ input {
   display: flex;
   align-items: center;
   color: #d36443;
-  padding-left: 15px;
 }
 
 .thumbImgWrapper {
@@ -276,6 +275,7 @@ input {
 
 .form-item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
    align-items: center;
   width: 80%
@@ -289,7 +289,7 @@ input {
 .signUpButton {
   margin: 15px;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-self: center;
 } 
 

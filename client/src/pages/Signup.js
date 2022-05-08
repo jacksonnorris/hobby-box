@@ -24,11 +24,11 @@ const Signup = (props) => {
 
     if (value.length === 0) {
       target.classList.add('missing');
-      target.classList.remove('form-control');
+      target.classList.remove('form-item');
       const required = target.nextElementSibling
       required.removeAttribute('hidden');
     } else {
-      target.classList.add('form-control');
+      target.classList.add('form-item');
       target.classList.remove('missing');
       const removed = target.nextElementSibling
       console.log(removed);
@@ -93,10 +93,10 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-          </div>
             <div className="form-warning">
               <p className='warning mt-2' hidden>Required</p>
             </div>
+          </div>
           <div className="form-item">
             <input className='signUpInput'
               placeholder="Your email"
@@ -106,10 +106,10 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-          </div>
             <div className="form-warning">
               <p className='warning mt-2' hidden>Required</p>
             </div>
+          </div>
           <div className="form-item">
             <input className='signUpInput'
               placeholder="******"
@@ -119,10 +119,10 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-          </div>
             <div className="form-warning">
               <p className='warning mt-2' hidden>Required</p>
             </div>
+          </div>
           <div className="form-item">
             <input className='signUpInput'
               placeholder="Billing Address"
@@ -132,10 +132,10 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-          </div>
             <div className="form-warning">
               <p className='warning mt-2' hidden>Required</p>
             </div>
+          </div>
           <div className="form-item">
             <input className='signUpInput'
               placeholder="Shipping Address"
@@ -145,10 +145,10 @@ const Signup = (props) => {
               onChange={handleChange}
               onBlur={handleChange}
             />
-          </div>
             <div className="form-warning">
               <p className='warning mt-2' hidden>Required</p>
             </div>
+          </div>
 
           <div className='signUpButton'>
             <button type="submit" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400   to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
