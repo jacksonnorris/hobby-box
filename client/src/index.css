@@ -179,8 +179,13 @@ button {
   margin-left: 2rem;
 }
 
-input {
+.loginFormInputs input,
+.signUpInput input {
   margin-top: 1rem;
+}
+
+.form-login .loginFormInputs {
+  width: 100%;
 }
 
 .missing {
@@ -309,7 +314,8 @@ input {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 70%;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .signUpForm {
