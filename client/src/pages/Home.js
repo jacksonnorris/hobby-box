@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <main>
-      <div class='heroImage'></div>
+      <div className='heroImage'></div>
       <div className="flex-row justify-center">
         <h2 className='welcome'>{renderUsername()}</h2>
         <Cart />
