@@ -34,7 +34,7 @@ const AboutUs = () => {
         <div id="accordion-collapse-body-2" className="hidden" aria-labelledby="accordion-collapse-heading-2">
           <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
             <p className="mb-2 text-gray-500 dark:text-gray-400">
-              There are 6 categories to select from so you can dabble and explore a new hobby or stick with your favorite hobby category. Each month, each box will contain new mystery products. This keeps it fresh and exciting allowing you to try new things. You can sign up for a monthly subscription and switch out between the different categories or purchase at your own pace.
+              There are 6 categories to select from so you can dabble and explore a new hobby or stick with your favorite hobby category. Each month, each box will contain new mystery products. This keeps it fresh and exciting allowing you to try new things. Purchase at your own pace each month so you can switch out between the different categories and explore new hobbies.
             </p>
           </div>
         </div>
