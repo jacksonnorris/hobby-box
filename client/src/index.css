@@ -51,6 +51,7 @@ header>div {
   background: url(https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp) center center no-repeat;
   background-attachment: fixed;
 }
+
 .aboutUsHeroImage {
   height: 200px;
   overflow: hidden;
@@ -264,7 +265,8 @@ input {
 
 .detail {
   margin-bottom: 1rem;
-  font-size: 17px;;
+  font-size: 17px;
+  ;
 }
 
 .thanks {
@@ -272,38 +274,42 @@ input {
   margin: 2rem;
 }
 
-.form.form{
+.form.form {
   margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.form-item {
+.signUpForm h2,
+.loginForm h2 {
+  font-size: 50px;
+}
+
+.signUpForm .form-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-   align-items: center;
+  align-items: center;
   width: 80%
-  
 }
 
-.signUpTitle {
+.signUpForm .signUpTitle {
   margin: 20px;
 }
 
-.signUpButton {
+.signUpForm .signUpButton {
   margin: 15px;
-  display: flex;
-  justify-content:center;
-  align-self: center;
-} 
-
- .signUpInput{
   display: flex;
   justify-content: center;
   align-self: center;
-  width:  70%;
+}
+
+.signUpForm .signUpInput {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 70%;
 }
 
 .signUpForm {
@@ -318,34 +324,34 @@ input {
   color: #81b29a;
 }
 
-.loginFormInputs{
+.loginForm .loginFormInputs {
   display: flex;
   justify-content: center;
   align-self: center;
   flex-direction: column;
 }
 
-.loginSubmitButton {
+.loginForm .loginSubmitButton {
   margin: 15px;
   display: flex;
   justify-content: center;
   align-self: center;
-} 
+}
 
-.loginForm{
+.loginForm {
   display: flex;
   justify-content: center;
   align-self: center;
 }
 
-.loginFormErr{
+.loginForm .loginFormErr {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  
+
 }
 
-.SandLBackground{
+.SandLBackground {
   background-image: url("https://res.cloudinary.com/dfamiaufc/image/upload/v1651960530/Hobby%20Box/heroImage_x00w0v.webp");
   background-size: cover;
   margin: 0px;
@@ -358,9 +364,11 @@ input {
 .loginTitle {
   padding: 20px;
 }
+
 .profile {
   margin-top: 3rem;
 }
+
 #aboutUsHeader {
   background-color: #81b29a;
   color: black;
