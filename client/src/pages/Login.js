@@ -67,7 +67,7 @@ const Login = () => {
       <div className='my-12
       form-control
       block
-      w-4/12
+      w-6/12
       px-3
       py-3
       text-base
