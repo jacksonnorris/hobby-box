@@ -179,7 +179,8 @@ button {
   margin-left: 2rem;
 }
 
-input {
+.loginFormInputs input,
+.signUpInput input {
   margin-top: 1rem;
 }
 
