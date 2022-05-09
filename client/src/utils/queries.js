@@ -26,9 +26,9 @@ export const QUERY_USER = gql`
   }
 `;
 
-export const QUERY_USERNAME = gql`
-  query username($username: String) {
-  username(username: $username) {
+export const QUERY_ADDRESS = gql`
+  query queryAddress($username: String!) {
+    queryAddress(username: $username) {
     _id
     username
     email

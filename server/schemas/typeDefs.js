@@ -76,10 +76,15 @@ const typeDefs = gql`
     session: ID
   }
 
+  type Confirmation {
+    products: [Box]
+    order: Order
+  }
+
   type Query {
     users: [User]
     user(id: ID!): User
-    username(username: String!): User
+    queryAddress(username: String!): User
     me: User
     orders: [Order]
     boxes: [Box]!
@@ -92,7 +97,7 @@ const typeDefs = gql`
     login(email:String!, password:String!): Auth
     updateUser(username: String, email: String, password: String, billingAddress: String, shippingAddress: String, orders: [OrderInputs]): User
     removeUser(_id: ID!): User
-    addOrder(products: [ID]!): Order
+    addOrder(products: [ID]!): Confirmation
     updateOrder(price: Float, box: BoxInputs, frequency: Int): Order
   }
 `;

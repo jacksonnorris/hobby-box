@@ -11,7 +11,7 @@ const resolvers = {
     user: async (parent, args) => {
       return User.findOne({ _id: args.id });
     },
-    username: async (parent, args) => {
+    queryAddress: async (parent, args) => {
       return User.findOne({ username: args.username });
     },
     me: async (parent, args, context) => {
@@ -116,9 +116,9 @@ const resolvers = {
       if (context.user) {
         const order = new Order({ products });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
-
-        return order;
+        const user = await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } }, { new: true }).populate('orders').populate({ path: 'orders', populate: 'products' });
+        const productItems = await Box.find({ _id: { $in: products } });
+        return { products: productItems, order };
       }
       throw new AuthenticationError('Something went wrong!');
     },
