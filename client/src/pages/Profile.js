@@ -15,7 +15,7 @@ const Profile = () => {
   const { loading, data, error } = useQuery(id ? QUERY_USER : QUERY_ME, {
     variables: { id },
   });
-
+  console.log('userdata', data);
   // Get a list of all users
   const { usersLoading, data: usersData } = useQuery(QUERY_USERS);
 
@@ -45,13 +45,13 @@ const Profile = () => {
   }
 
   const renderCurrentUserInfo = () => {
-    if (id) return null;
+    if (id && data.me) return null;
     return (
       <ul className='order-details'>
         <li className='detail'>Username: {user.username}</li>
         <li className='detail'>Email: {user.email}</li>
-        <li className='detail'>Billing Address: {user.billingAddress}</li>
-        <li className='detail'>Shipping Address: {user.shippingAddress}</li>
+        <li className='detail'>Billing Address: {data.me.billingAddress}</li>
+        <li className='detail'>Shipping Address: {data.me.shippingAddress}</li>
       </ul>
     );
   }
