@@ -21,7 +21,7 @@ const AboutUs = () => {
         </h2>
         <div id="accordion-collapse-body-1" className="hidden" aria-labelledby="accordion-collapse-heading-1">
           <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-            <p className="mb-2 text-gray-500 dark:text-gray-400">We provide the necessary sets of supplies needed to bring your passionate pursuit to practice, but we assist in choosing the pathway to becoming an expert! Manifest your interests and ideas into <strong>EXISTENCE</strong> with the click of a button. Choose the tier that best meshes with YOUR schedule and interests so that you don't overwhelm yourself with new things to do. Being a newbie can be intimidating. Let us help so you can think outside the Box!</p>
+            <p className="mb-2 text-gray-500 dark:text-gray-400">We provide the necessary sets of supplies needed to bring your passionate hobby pursuit to practice. Boredom  will no longer be a thing, manifest your interests and ideas into <strong>EXISTENCE</strong> with Hobby Box! You have the option to select from 6 different hobby categories. Select your favorite category or get a little crazy and try out a new one to discover a new Hobby! Let us help so you can think outside the Box!</p>
           </div>
         </div>
         {/* Question 2 */}
@@ -34,7 +34,7 @@ const AboutUs = () => {
         <div id="accordion-collapse-body-2" className="hidden" aria-labelledby="accordion-collapse-heading-2">
           <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
             <p className="mb-2 text-gray-500 dark:text-gray-400">
-              There are 6 categories to select from so you can dabble and explore a new hobby or stick with your favorite hobby category. Each month, each box will contain new mystery products. This keeps it fresh and exciting allowing you to try new things. You can sign up for a monthly subscription or purchase at your own pace.
+              There are 6 categories to select from so you can dabble and explore a new hobby or stick with your favorite hobby category. Each month, each box will contain new mystery products. This keeps it fresh and exciting allowing you to try new things. You can sign up for a monthly subscription and switch out between the different categories or purchase at your own pace.
             </p>
           </div>
         </div>
@@ -52,9 +52,9 @@ const AboutUs = () => {
             <p className="mb-2 text-gray-500 dark:text-gray-400">Examples of what you might receive in each box:</p>
             <ul className="pl-5 list-disc text-gray-500 dark:text-gray-400">
               <li><strong>Keyboards:</strong> parts, components, and tools that every mechanical keyboard lover will love to use! </li>
-              <li><strong>Dungeons & Dragons:</strong> dice Sets to Mini Figures and even to game maps that can bring your game to life! </li>
-              <li><strong>Arts & Crafts:</strong> DIY kits for knitting, painting, journaling to make your Pintrest ideas come true! </li>
-              <li><strong>Gardening:</strong> live plants, seeds and gardending tools to bring life to your home! </li>
+              <li><strong>Dungeons & Dragons:</strong> dice sets to mini figures and even to game maps that can bring your game to life! </li>
+              <li><strong>Arts & Crafts:</strong> DIY kits for knitting, painting, jewlery design. etc. to make your Pintrest ideas come true! </li>
+              <li><strong>Gardening:</strong> live plants, seeds and gardening tools to bring life to your home! </li>
               <li><strong>Books:</strong> books from different genres that you can suggest to you book club! </li>
               <li><strong>Beer/Wine:</strong> beer brewing kits, tools for beer and wine, samples or full size bottles to try! </li>
             </ul>
